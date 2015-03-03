@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6254" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="Volibo_ViewController">
+            <connections>
+                <outlet property="animationView" destination="GY8-wx-cqI" id="dyZ-B7-qmD"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="24.png" translatesAutoresizingMaskIntoConstraints="NO" id="97K-lw-cBa">
+                    <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="27.png" translatesAutoresizingMaskIntoConstraints="NO" id="iQ7-gP-ILG">
+                    <rect key="frame" x="363" y="336" width="298" height="298"/>
+                </imageView>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qOp-1h-LQ6">
+                    <rect key="frame" x="941" y="691" width="50" height="50"/>
+                    <state key="normal" image="28.png">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="gotoHome:" destination="-1" eventType="touchUpInside" id="ABS-z2-rBr"/>
+                    </connections>
+                </button>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="26.png" translatesAutoresizingMaskIntoConstraints="NO" id="GY8-wx-cqI">
+                    <rect key="frame" x="344" y="415" width="337" height="295"/>
+                </imageView>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <gestureRecognizers/>
+            <nil key="simulatedStatusBarMetrics"/>
+            <nil key="simulatedTopBarMetrics"/>
+            <nil key="simulatedBottomBarMetrics"/>
+            <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outletCollection property="gestureRecognizers" destination="jLi-R3-c13" appends="YES" id="VoD-qq-N6H"/>
+                <outletCollection property="gestureRecognizers" destination="nRf-8L-oNH" appends="YES" id="pFs-9x-0Z4"/>
+            </connections>
+        </view>
+        <swipeGestureRecognizer direction="right" id="jLi-R3-c13">
+            <connections>
+                <action selector="swipeRight:" destination="-1" id="gnQ-Uz-sc4"/>
+            </connections>
+        </swipeGestureRecognizer>
+        <swipeGestureRecognizer direction="left" id="nRf-8L-oNH">
+            <connections>
+                <action selector="swipeLeft:" destination="-1" id="Ir4-2H-CWN"/>
+            </connections>
+        </swipeGestureRecognizer>
+    </objects>
+    <resources>
+        <image name="24.png" width="4270" height="3204"/>
+        <image name="26.png" width="1591" height="1363"/>
+        <image name="27.png" width="1396" height="1396"/>
+        <image name="28.png" width="227" height="227"/>
+    </resources>
+</document>
