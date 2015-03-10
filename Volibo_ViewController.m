@@ -13,13 +13,16 @@
 @end
 
 @implementation Volibo_ViewController
-@synthesize animationView;
+@synthesize plate,number,text1,text2,text3,popup,popupImg,closeBtn;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
    
     // Do any additional setup after loading the view from its nib.
     [self backAnimation];
+    popupImg.hidden=YES;
+    closeBtn.hidden=YES;
+    text3.hidden=YES;
 }
 
 - (void)didReceiveMemoryWarning {
@@ -34,6 +37,7 @@
     return NO;
 }
 -(void)viewWillAppear:(BOOL)animated{
+    
     self.navigationController.navigationBar.hidden = YES;
     self.navigationController.interactivePopGestureRecognizer.enabled = NO;
 }
@@ -43,20 +47,20 @@
 }
 -(void)backAnimation{
     
-    animationView.frame=CGRectMake(506, 487, 0, 0);
-    
-    [UIView animateWithDuration:2.0
-                          delay:0.1
-                        options: UIViewAnimationOptionCurveEaseIn
-                     animations:^{
-                         
-                         animationView.frame=CGRectMake(344, 415, 337, 295);
-                         
-                         
-                     }
-                     completion:^(BOOL finished)
-     {
-     }];
+//    animationView.frame=CGRectMake(506, 487, 0, 0);
+//    
+//    [UIView animateWithDuration:2.0
+//                          delay:0.1
+//                        options: UIViewAnimationOptionCurveEaseIn
+//                     animations:^{
+//                         
+//                         animationView.frame=CGRectMake(344, 415, 337, 295);
+//                         
+//                         
+//                     }
+//                     completion:^(BOOL finished)
+//     {
+//     }];
     
 }
 
@@ -72,16 +76,46 @@
 
 - (IBAction)gotoHome:(id)sender {
     
-    ViewController *ViewControllerObj=[[ViewController alloc]init];
-    [self.navigationController pushViewController:ViewControllerObj animated:NO];
+    HomeViewController *HomeViewControllerObj=[[HomeViewController alloc]init];
+    [self.navigationController pushViewController:HomeViewControllerObj animated:NO];
 }
 
 - (IBAction)swipeRight:(UISwipeGestureRecognizer *)sender {
+    
+    HomeViewController *HomeViewControllerObj=[[HomeViewController alloc]init];
+    [self.navigationController pushViewController:HomeViewControllerObj animated:NO];
 }
 
 - (IBAction)swipeLeft:(UISwipeGestureRecognizer *)sender {
     
     page2ViewController *page2ViewControllerObj=[[page2ViewController alloc]init];
     [self.navigationController pushViewController:page2ViewControllerObj animated:NO];
+}
+
+- (IBAction)popupAction:(id)sender {
+    
+    NSLog(@"Hi this is popup");
+    popupImg.hidden=NO;
+    closeBtn.hidden=NO;
+    text3.hidden=NO;
+    
+    plate.hidden=YES;
+    number.hidden=YES;
+    text1.hidden=YES;
+    text2.hidden=YES;
+    popup.hidden=YES;
+}
+
+- (IBAction)closeAction:(id)sender {
+    
+    popupImg.hidden=YES;
+    closeBtn.hidden=YES;
+    text3.hidden=YES;
+    
+    plate.hidden=NO;
+    number.hidden=NO;
+    text1.hidden=NO;
+    text2.hidden=NO;
+    popup.hidden=NO;
 }
 @end

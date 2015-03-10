@@ -14,16 +14,21 @@
 
 @implementation page2ViewController
 
+@synthesize imageView;
+
 - (void)viewDidLoad {
+    NSLog(@" this is page 2");
     [super viewDidLoad];
-    NSLog(@"page2ViewController");
+    
     // Do any additional setup after loading the view from its nib.
 }
-
+//9022630134
+//rampal
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
 {
     if (interfaceOrientation==UIInterfaceOrientationLandscapeLeft || interfaceOrientation==UIInterfaceOrientationLandscapeRight)
@@ -55,5 +60,39 @@
 }
 
 - (IBAction)swipeLeft:(UISwipeGestureRecognizer *)sender {
+}
+
+- (IBAction)efficancyAction:(id)sender {
+    NSLog(@"efficancyAction");
+}
+
+- (IBAction)potencyBtn:(id)sender {
+    NSLog(@"potencyBtn");
+    EfficancyViewController *EfficancyViewControllerObj=[[EfficancyViewController alloc]init];
+    [self.navigationController pushViewController:EfficancyViewControllerObj animated:NO];
+}
+
+- (IBAction)tolerabikityAction:(id)sender {
+    NSLog(@"tolerabikityAction");
+    TolerabikityViewController *TolerabikityViewControllerObj=[[TolerabikityViewController alloc]init];
+    [self.navigationController pushViewController:TolerabikityViewControllerObj animated:NO];
+}
+
+- (IBAction)excursionAction:(id)sender {
+    NSLog(@"excursionAction");
+    ExcursionViewController *ExcursionViewControllerObjObj=[[ExcursionViewController alloc]init];
+    [self.navigationController pushViewController:ExcursionViewControllerObjObj animated:NO];
+}
+
+- (IBAction)nephroAction:(id)sender {
+    NSLog(@"nephroAction");
+    NephroViewController *NephroViewControllerObj=[[NephroViewController alloc]init];
+    [self.navigationController pushViewController:NephroViewControllerObj animated:NO];
+}
+
+- (IBAction)homeAction:(id)sender {
+    
+    HomeViewController *HomeViewControllerObj=[[HomeViewController alloc]init];
+    [self.navigationController pushViewController:HomeViewControllerObj animated:NO];
 }
 @end

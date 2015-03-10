@@ -6,7 +6,14 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="Volibo_ViewController">
             <connections>
-                <outlet property="animationView" destination="GY8-wx-cqI" id="dyZ-B7-qmD"/>
+                <outlet property="closeBtn" destination="lhU-h8-Rvo" id="gVu-8m-yIR"/>
+                <outlet property="number" destination="GY8-wx-cqI" id="hBU-ra-ERT"/>
+                <outlet property="plate" destination="iQ7-gP-ILG" id="4En-ug-MhK"/>
+                <outlet property="popup" destination="R7E-Tm-bJm" id="EmE-al-AtY"/>
+                <outlet property="popupImg" destination="s0I-f6-zRD" id="ZfO-Gt-sMr"/>
+                <outlet property="text1" destination="raP-cY-Wn0" id="FcT-Kr-hnA"/>
+                <outlet property="text2" destination="4ia-5o-Xbm" id="8Tb-Q8-XDU"/>
+                <outlet property="text3" destination="4cK-UE-1R8" id="9hv-8X-Lr7"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -15,14 +22,14 @@
             <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="24.png" translatesAutoresizingMaskIntoConstraints="NO" id="97K-lw-cBa">
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="2-1.png" translatesAutoresizingMaskIntoConstraints="NO" id="97K-lw-cBa">
                     <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                 </imageView>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="27.png" translatesAutoresizingMaskIntoConstraints="NO" id="iQ7-gP-ILG">
-                    <rect key="frame" x="363" y="336" width="298" height="298"/>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="2-2.png" translatesAutoresizingMaskIntoConstraints="NO" id="iQ7-gP-ILG">
+                    <rect key="frame" x="300" y="303" width="423" height="424"/>
                 </imageView>
                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qOp-1h-LQ6">
-                    <rect key="frame" x="941" y="691" width="50" height="50"/>
+                    <rect key="frame" x="938" y="694" width="52" height="54"/>
                     <state key="normal" image="28.png">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
@@ -30,9 +37,39 @@
                         <action selector="gotoHome:" destination="-1" eventType="touchUpInside" id="ABS-z2-rBr"/>
                     </connections>
                 </button>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="26.png" translatesAutoresizingMaskIntoConstraints="NO" id="GY8-wx-cqI">
-                    <rect key="frame" x="344" y="415" width="337" height="295"/>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="2-3.png" translatesAutoresizingMaskIntoConstraints="NO" id="GY8-wx-cqI">
+                    <rect key="frame" x="429" y="418" width="136" height="186"/>
                 </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="2-4.png" translatesAutoresizingMaskIntoConstraints="NO" id="raP-cY-Wn0">
+                    <rect key="frame" x="370" y="347" width="283" height="339"/>
+                </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="2-5.png" translatesAutoresizingMaskIntoConstraints="NO" id="4ia-5o-Xbm">
+                    <rect key="frame" x="342" y="383" width="340" height="292"/>
+                </imageView>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R7E-Tm-bJm">
+                    <rect key="frame" x="323" y="327" width="373" height="380"/>
+                    <state key="normal">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="popupAction:" destination="-1" eventType="touchUpInside" id="pQe-ht-by4"/>
+                    </connections>
+                </button>
+                <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="3-1.png" translatesAutoresizingMaskIntoConstraints="NO" id="s0I-f6-zRD">
+                    <rect key="frame" x="207" y="309" width="607" height="350"/>
+                </imageView>
+                <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="3-2.png" translatesAutoresizingMaskIntoConstraints="NO" id="4cK-UE-1R8">
+                    <rect key="frame" x="230" y="682" width="559" height="21"/>
+                </imageView>
+                <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lhU-h8-Rvo">
+                    <rect key="frame" x="781" y="308" width="27" height="30"/>
+                    <state key="normal">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="closeAction:" destination="-1" eventType="touchUpInside" id="e9V-xb-7Ri"/>
+                    </connections>
+                </button>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <gestureRecognizers/>
@@ -58,9 +95,13 @@
         </swipeGestureRecognizer>
     </objects>
     <resources>
-        <image name="24.png" width="4270" height="3204"/>
-        <image name="26.png" width="1591" height="1363"/>
-        <image name="27.png" width="1396" height="1396"/>
+        <image name="2-1.png" width="2134" height="1601"/>
+        <image name="2-2.png" width="884" height="884"/>
+        <image name="2-3.png" width="288" height="387"/>
+        <image name="2-4.png" width="606" height="647"/>
+        <image name="2-5.png" width="693" height="694"/>
         <image name="28.png" width="227" height="227"/>
+        <image name="3-1.png" width="1262" height="737"/>
+        <image name="3-2.png" width="1169" height="41"/>
     </resources>
 </document>

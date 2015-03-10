@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6254" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="EfficancyViewController">
+            <connections>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="2-1.png" translatesAutoresizingMaskIntoConstraints="NO" id="8EW-ml-Ub1">
+                    <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="9-1.png" translatesAutoresizingMaskIntoConstraints="NO" id="vPU-Tz-49m">
+                    <rect key="frame" x="67" y="373" width="328" height="193"/>
+                </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="9-2.png" translatesAutoresizingMaskIntoConstraints="NO" id="rJY-U8-Cz0">
+                    <rect key="frame" x="458" y="297" width="546" height="345"/>
+                </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="9-3.png" translatesAutoresizingMaskIntoConstraints="NO" id="k8p-qK-m2m">
+                    <rect key="frame" x="526" y="352" width="139" height="192"/>
+                </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="9-4.png" translatesAutoresizingMaskIntoConstraints="NO" id="KPT-8J-8U2">
+                    <rect key="frame" x="757" y="352" width="137" height="192"/>
+                </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="9-5.png" translatesAutoresizingMaskIntoConstraints="NO" id="J6D-wS-9El">
+                    <rect key="frame" x="677" y="489" width="80" height="40"/>
+                </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="9-6.png" translatesAutoresizingMaskIntoConstraints="NO" id="c9l-Fy-67C">
+                    <rect key="frame" x="573" y="549" width="245" height="74"/>
+                </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="9-7.png" translatesAutoresizingMaskIntoConstraints="NO" id="dmX-C3-3hr">
+                    <rect key="frame" x="837" y="557" width="75" height="21"/>
+                </imageView>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q8a-A2-n01">
+                    <rect key="frame" x="30" y="711" width="143" height="33"/>
+                    <state key="normal" image="tab.png">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="efficancyAction:" destination="-1" eventType="touchUpInside" id="x0W-mt-Mvx"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NAQ-3j-UFo">
+                    <rect key="frame" x="216" y="711" width="143" height="33"/>
+                    <state key="normal" image="9-8.png">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="potencyBtn:" destination="-1" eventType="touchUpInside" id="jLC-yI-7LU"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g5x-3r-VFg">
+                    <rect key="frame" x="397" y="711" width="143" height="33"/>
+                    <state key="normal" image="4-9.png">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="tolerabikityAction:" destination="-1" eventType="touchUpInside" id="YDU-hi-Bpq"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nx4-qZ-fCs">
+                    <rect key="frame" x="583" y="711" width="143" height="33"/>
+                    <state key="normal" image="4-10.png">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="excursionAction:" destination="-1" eventType="touchUpInside" id="ge3-D5-ytd"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7vR-pH-9Qh">
+                    <rect key="frame" x="766" y="711" width="143" height="33"/>
+                    <state key="normal" image="4-11.png">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="nephroAction:" destination="-1" eventType="touchUpInside" id="eK1-oE-bn0"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SHf-bD-QWa">
+                    <rect key="frame" x="938" y="694" width="52" height="54"/>
+                    <state key="normal" image="2-6.png">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="homeAction:" destination="-1" eventType="touchUpInside" id="g6Y-Im-RbM"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <nil key="simulatedStatusBarMetrics"/>
+            <nil key="simulatedTopBarMetrics"/>
+            <nil key="simulatedBottomBarMetrics"/>
+            <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="2-1.png" width="2134" height="1601"/>
+        <image name="2-6.png" width="113" height="113"/>
+        <image name="4-10.png" width="300" height="69"/>
+        <image name="4-11.png" width="300" height="69"/>
+        <image name="4-9.png" width="300" height="69"/>
+        <image name="9-1.png" width="682" height="400"/>
+        <image name="9-2.png" width="1139" height="718"/>
+        <image name="9-3.png" width="284" height="402"/>
+        <image name="9-4.png" width="286" height="401"/>
+        <image name="9-5.png" width="164" height="84"/>
+        <image name="9-6.png" width="509" height="149"/>
+        <image name="9-7.png" width="154" height="43"/>
+        <image name="9-8.png" width="300" height="69"/>
+        <image name="tab.png" width="300" height="69"/>
+    </resources>
+</document>

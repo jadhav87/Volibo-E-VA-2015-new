@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "Volibo_ViewController.h"
+#import "HomeViewController.h"
 
 @interface ViewController : UIViewController
 {

@@ -19,7 +19,7 @@
     
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
-    ViewController *home=[[ViewController alloc] initWithNibName:@"ViewController" bundle:nil];
+    HomeViewController *home=[[HomeViewController alloc] initWithNibName:@"HomeViewController" bundle:nil];
     
     UINavigationController *NVC=[[UINavigationController alloc] initWithRootViewController:home];
     self.window.rootViewController=NVC;

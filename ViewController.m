@@ -52,8 +52,8 @@
 - (IBAction)gotoVolibo:(id)sender {
     
     NSLog(@"gotoVolibo");
-    Volibo_ViewController *Volibo_ViewControllerObj=[[Volibo_ViewController alloc]init];
-    [self.navigationController pushViewController:Volibo_ViewControllerObj animated:NO];
+    HomeViewController *HomeViewControllerObj=[[HomeViewController alloc]init];
+    [self.navigationController pushViewController:HomeViewControllerObj animated:NO];
 }
 
 - (IBAction)gtotVoliboM:(id)sender {

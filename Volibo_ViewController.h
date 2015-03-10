@@ -7,15 +7,31 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "ViewController.h"
+#import "HomeViewController.h"
 #import "page2ViewController.h"
 
 @interface Volibo_ViewController : UIViewController
 {
-    IBOutlet UIImageView *animationView;
+    IBOutlet UIImageView *plate;
+    IBOutlet UIImageView *number;
+    IBOutlet UIImageView *text1;
+    IBOutlet UIImageView *text2;
+    IBOutlet UIImageView *text3;
+    IBOutlet UIImageView *popupImg;
+    IBOutlet UIButton *popup;
+    IBOutlet UIButton *closeBtn;
 }
-@property(nonatomic,retain)IBOutlet UIImageView *animationView;;
+@property(nonatomic,retain)IBOutlet UIImageView *plate;
+@property(nonatomic,retain)IBOutlet UIImageView *number;
+@property(nonatomic,retain)IBOutlet UIImageView *text1;
+@property(nonatomic,retain)IBOutlet UIImageView *text2;
+@property(nonatomic,retain)IBOutlet UIImageView *text3;
+@property(nonatomic,retain)IBOutlet UIImageView *popupImg;
+@property(nonatomic,retain)IBOutlet UIButton *popup;
+@property(nonatomic,retain)IBOutlet UIButton *closeBtn;
 - (IBAction)gotoHome:(id)sender;
 - (IBAction)swipeRight:(UISwipeGestureRecognizer *)sender;
 - (IBAction)swipeLeft:(UISwipeGestureRecognizer *)sender;
+- (IBAction)popupAction:(id)sender;
+- (IBAction)closeAction:(id)sender;
 @end
