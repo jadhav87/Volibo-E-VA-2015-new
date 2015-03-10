@@ -52,22 +52,22 @@
 }
 -(void)graphAnimation{
     
-    graphAni1.frame=CGRectMake(328, 589, 45, 0);
-    graphAni2.frame=CGRectMake(399, 589, 45, 0);
-    graphAni3.frame=CGRectMake(472, 589, 45, 0);
-    graphAni4.frame=CGRectMake(555, 589, 45, 0);
-    graphAni5.frame=CGRectMake(634, 589, 45, 0);
+    graphAni1.frame=CGRectMake(328, 589, 49, 0);
+    graphAni2.frame=CGRectMake(399, 589, 49, 0);
+    graphAni3.frame=CGRectMake(472, 589, 49, 0);
+    graphAni4.frame=CGRectMake(555, 589, 49, 0);
+    graphAni5.frame=CGRectMake(634, 589, 49, 0);
     
-    [UIView animateWithDuration:2.0
+    [UIView animateWithDuration:1.0
                           delay:0.1
                         options: UIViewAnimationOptionCurveEaseIn
                      animations:^{
                          
-                         graphAni1.frame=CGRectMake(328, 390, 45, 199);
-                         graphAni2.frame=CGRectMake(399, 390, 45, 199);
-                         graphAni3.frame=CGRectMake(472, 390, 45, 199);
-                         graphAni4.frame=CGRectMake(555, 390, 45, 199);
-                         graphAni5.frame=CGRectMake(634, 390, 45, 199);
+                         graphAni1.frame=CGRectMake(328, 390, 49, 199);
+                         graphAni2.frame=CGRectMake(399, 390, 49, 199);
+                         graphAni3.frame=CGRectMake(472, 390, 49, 199);
+                         graphAni4.frame=CGRectMake(555, 390, 49, 199);
+                         graphAni5.frame=CGRectMake(634, 390, 49, 199);
                          
                          
                      }
