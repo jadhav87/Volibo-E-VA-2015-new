@@ -14,13 +14,18 @@
 
 @implementation Volibo_ViewController
 @synthesize plate,number,text1,text2,text3,popup,popupImg,closeBtn;
+@synthesize graphAni1,graphAni2,graphAni3,graphAni4,graphAni5;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
    
     // Do any additional setup after loading the view from its nib.
-    [self backAnimation];
     popupImg.hidden=YES;
+    graphAni1.hidden=YES;
+    graphAni2.hidden=YES;
+    graphAni3.hidden=YES;
+    graphAni4.hidden=YES;
+    graphAni5.hidden=YES;
     closeBtn.hidden=YES;
     text3.hidden=YES;
 }
@@ -45,22 +50,30 @@
 {
     return YES;
 }
--(void)backAnimation{
+-(void)graphAnimation{
     
-//    animationView.frame=CGRectMake(506, 487, 0, 0);
-//    
-//    [UIView animateWithDuration:2.0
-//                          delay:0.1
-//                        options: UIViewAnimationOptionCurveEaseIn
-//                     animations:^{
-//                         
-//                         animationView.frame=CGRectMake(344, 415, 337, 295);
-//                         
-//                         
-//                     }
-//                     completion:^(BOOL finished)
-//     {
-//     }];
+    graphAni1.frame=CGRectMake(328, 589, 45, 0);
+    graphAni2.frame=CGRectMake(399, 589, 45, 0);
+    graphAni3.frame=CGRectMake(472, 589, 45, 0);
+    graphAni4.frame=CGRectMake(555, 589, 45, 0);
+    graphAni5.frame=CGRectMake(634, 589, 45, 0);
+    
+    [UIView animateWithDuration:2.0
+                          delay:0.1
+                        options: UIViewAnimationOptionCurveEaseIn
+                     animations:^{
+                         
+                         graphAni1.frame=CGRectMake(328, 390, 45, 199);
+                         graphAni2.frame=CGRectMake(399, 390, 45, 199);
+                         graphAni3.frame=CGRectMake(472, 390, 45, 199);
+                         graphAni4.frame=CGRectMake(555, 390, 45, 199);
+                         graphAni5.frame=CGRectMake(634, 390, 45, 199);
+                         
+                         
+                     }
+                     completion:^(BOOL finished)
+     {
+     }];
     
 }
 
@@ -99,11 +112,20 @@
     closeBtn.hidden=NO;
     text3.hidden=NO;
     
+    graphAni1.hidden=NO;
+    graphAni2.hidden=NO;
+    graphAni3.hidden=NO;
+    graphAni4.hidden=NO;
+    graphAni5.hidden=NO;
+    [self graphAnimation];
+    
     plate.hidden=YES;
     number.hidden=YES;
     text1.hidden=YES;
     text2.hidden=YES;
     popup.hidden=YES;
+    
+    
 }
 
 - (IBAction)closeAction:(id)sender {
@@ -111,6 +133,12 @@
     popupImg.hidden=YES;
     closeBtn.hidden=YES;
     text3.hidden=YES;
+    
+    graphAni1.hidden=YES;
+    graphAni2.hidden=YES;
+    graphAni3.hidden=YES;
+    graphAni4.hidden=YES;
+    graphAni5.hidden=YES;
     
     plate.hidden=NO;
     number.hidden=NO;

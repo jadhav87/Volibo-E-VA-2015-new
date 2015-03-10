@@ -18,6 +18,13 @@
     IBOutlet UIImageView *text2;
     IBOutlet UIImageView *text3;
     IBOutlet UIImageView *popupImg;
+    
+    IBOutlet UIImageView *graphAni1;
+    IBOutlet UIImageView *graphAni2;
+    IBOutlet UIImageView *graphAni3;
+    IBOutlet UIImageView *graphAni4;
+    IBOutlet UIImageView *graphAni5;
+    
     IBOutlet UIButton *popup;
     IBOutlet UIButton *closeBtn;
 }
@@ -27,6 +34,13 @@
 @property(nonatomic,retain)IBOutlet UIImageView *text2;
 @property(nonatomic,retain)IBOutlet UIImageView *text3;
 @property(nonatomic,retain)IBOutlet UIImageView *popupImg;
+
+@property(nonatomic,retain)IBOutlet UIImageView *graphAni1;
+@property(nonatomic,retain)IBOutlet UIImageView *graphAni2;
+@property(nonatomic,retain)IBOutlet UIImageView *graphAni3;
+@property(nonatomic,retain)IBOutlet UIImageView *graphAni4;
+@property(nonatomic,retain)IBOutlet UIImageView *graphAni5;
+
 @property(nonatomic,retain)IBOutlet UIButton *popup;
 @property(nonatomic,retain)IBOutlet UIButton *closeBtn;
 - (IBAction)gotoHome:(id)sender;
