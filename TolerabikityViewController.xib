@@ -6,11 +6,11 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TolerabikityViewController">
             <connections>
-                <outlet property="arrow" destination="FCy-nX-GSR" id="wce-kw-jSu"/>
+                <outlet property="aniImg" destination="EoJ-z6-pif" id="TSR-V0-o2D"/>
                 <outlet property="chapatiImg" destination="Ukt-DD-nKY" id="H2a-K7-LSS"/>
+                <outlet property="flatChapati" destination="a1y-hz-x6k" id="FwO-4N-SmA"/>
+                <outlet property="grapView" destination="b5t-uo-z40" id="7Xr-3e-Pw0"/>
                 <outlet property="tapButton" destination="2nJ-q9-uhd" id="wO1-Yz-YhS"/>
-                <outlet property="text1" destination="hQR-R3-yNQ" id="Q1I-60-c67"/>
-                <outlet property="text2" destination="jEF-9w-s4F" id="oht-vl-Lyd"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -19,11 +19,11 @@
             <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="2-1.png" translatesAutoresizingMaskIntoConstraints="NO" id="G7l-Zv-3oj">
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="page10landing.png" translatesAutoresizingMaskIntoConstraints="NO" id="G7l-Zv-3oj">
                     <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                 </imageView>
                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rdn-ZV-A32">
-                    <rect key="frame" x="30" y="711" width="143" height="33"/>
+                    <rect key="frame" x="216" y="711" width="143" height="33"/>
                     <state key="normal" image="tab.png">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
@@ -32,7 +32,7 @@
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N7U-mG-XYU">
-                    <rect key="frame" x="216" y="711" width="143" height="33"/>
+                    <rect key="frame" x="30" y="711" width="143" height="33"/>
                     <state key="normal" image="4-8.png">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
@@ -82,15 +82,6 @@
                 <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="10-2.png" translatesAutoresizingMaskIntoConstraints="NO" id="Ukt-DD-nKY">
                     <rect key="frame" x="421" y="403" width="218" height="190"/>
                 </imageView>
-                <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="11-2.png" translatesAutoresizingMaskIntoConstraints="NO" id="FCy-nX-GSR">
-                    <rect key="frame" x="500" y="447" width="48" height="82"/>
-                </imageView>
-                <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="11-3.png" translatesAutoresizingMaskIntoConstraints="NO" id="hQR-R3-yNQ">
-                    <rect key="frame" x="497" y="354" width="73" height="25"/>
-                </imageView>
-                <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="11-4.png" translatesAutoresizingMaskIntoConstraints="NO" id="jEF-9w-s4F">
-                    <rect key="frame" x="402" y="459" width="263" height="184"/>
-                </imageView>
                 <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2nJ-q9-uhd">
                     <rect key="frame" x="434" y="403" width="205" height="184"/>
                     <state key="normal">
@@ -100,6 +91,82 @@
                         <action selector="tapAction:" destination="-1" eventType="touchUpInside" id="MTd-v3-Qgx"/>
                     </connections>
                 </button>
+                <imageView hidden="YES" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="flatcapati.png" translatesAutoresizingMaskIntoConstraints="NO" id="a1y-hz-x6k">
+                    <rect key="frame" x="365" y="341" width="321" height="321"/>
+                </imageView>
+                <view hidden="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="b5t-uo-z40">
+                    <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                    <subviews>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="page10back.png" translatesAutoresizingMaskIntoConstraints="NO" id="oEE-3u-e20">
+                            <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                        </imageView>
+                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T8c-7L-pAC">
+                            <rect key="frame" x="216" y="711" width="143" height="33"/>
+                            <state key="normal" image="tab.png">
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="efficancyAction:" destination="-1" eventType="touchUpInside" id="JJ7-QO-6nz"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j7R-2x-XGj">
+                            <rect key="frame" x="938" y="694" width="52" height="54"/>
+                            <state key="normal" image="2-6.png">
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="homeAction:" destination="-1" eventType="touchUpInside" id="XP3-4J-sSJ"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8vs-BG-ofG">
+                            <rect key="frame" x="397" y="711" width="143" height="33"/>
+                            <state key="normal" image="10-3.png">
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="tolerabikityAction:" destination="-1" eventType="touchUpInside" id="nfo-wP-qaj"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M2n-XQ-pK8">
+                            <rect key="frame" x="30" y="711" width="143" height="33"/>
+                            <state key="normal" image="4-8.png">
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="potencyBtn:" destination="-1" eventType="touchUpInside" id="gMj-Zl-tI5"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WVd-ye-t2v">
+                            <rect key="frame" x="583" y="711" width="143" height="33"/>
+                            <state key="normal" image="4-10.png">
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="excursionAction:" destination="-1" eventType="touchUpInside" id="CHZ-6b-nu0"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fqc-Iw-exV">
+                            <rect key="frame" x="766" y="711" width="143" height="33"/>
+                            <state key="normal" image="4-11.png">
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="nephroAction:" destination="-1" eventType="touchUpInside" id="JnS-Jj-Qt6"/>
+                            </connections>
+                        </button>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="graph10.png" translatesAutoresizingMaskIntoConstraints="NO" id="EoJ-z6-pif"/>
+                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xBH-1j-waZ">
+                            <rect key="frame" x="896" y="296" width="33" height="30"/>
+                            <state key="normal">
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="closeAction:" destination="-1" eventType="touchUpInside" id="lIF-4A-Oll"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                </view>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <nil key="simulatedStatusBarMetrics"/>
@@ -107,20 +174,21 @@
             <nil key="simulatedBottomBarMetrics"/>
             <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="140" y="154"/>
         </view>
     </objects>
     <resources>
         <image name="10-1.png" width="796" height="796"/>
         <image name="10-2.png" width="446" height="389"/>
         <image name="10-3.png" width="300" height="69"/>
-        <image name="11-2.png" width="104" height="190"/>
-        <image name="11-3.png" width="167" height="58"/>
-        <image name="11-4.png" width="626" height="626"/>
-        <image name="2-1.png" width="2134" height="1601"/>
         <image name="2-6.png" width="113" height="113"/>
         <image name="4-10.png" width="300" height="69"/>
         <image name="4-11.png" width="300" height="69"/>
         <image name="4-8.png" width="300" height="69"/>
+        <image name="flatcapati.png" width="660" height="661"/>
+        <image name="graph10.png" width="429" height="429"/>
+        <image name="page10back.png" width="2134" height="1597"/>
+        <image name="page10landing.png" width="2134" height="1549"/>
         <image name="tab.png" width="300" height="69"/>
     </resources>
 </document>

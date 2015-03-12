@@ -14,7 +14,7 @@
 
 @implementation Volibo_ViewController
 @synthesize plate,number,text1,text2,text3,popup,popupImg,closeBtn;
-@synthesize graphAni1,graphAni2,graphAni3,graphAni4,graphAni5;
+@synthesize graphAni1;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -22,10 +22,6 @@
     // Do any additional setup after loading the view from its nib.
     popupImg.hidden=YES;
     graphAni1.hidden=YES;
-    graphAni2.hidden=YES;
-    graphAni3.hidden=YES;
-    graphAni4.hidden=YES;
-    graphAni5.hidden=YES;
     closeBtn.hidden=YES;
     text3.hidden=YES;
 }
@@ -52,22 +48,14 @@
 }
 -(void)graphAnimation{
     
-    graphAni1.frame=CGRectMake(328, 589, 49, 0);
-    graphAni2.frame=CGRectMake(399, 589, 49, 0);
-    graphAni3.frame=CGRectMake(472, 589, 49, 0);
-    graphAni4.frame=CGRectMake(555, 589, 49, 0);
-    graphAni5.frame=CGRectMake(634, 589, 49, 0);
+    graphAni1.frame=CGRectMake(328, 631, 355, 0);
     
     [UIView animateWithDuration:1.0
                           delay:0.1
                         options: UIViewAnimationOptionCurveEaseIn
                      animations:^{
                          
-                         graphAni1.frame=CGRectMake(328, 390, 49, 199);
-                         graphAni2.frame=CGRectMake(399, 390, 49, 199);
-                         graphAni3.frame=CGRectMake(472, 390, 49, 199);
-                         graphAni4.frame=CGRectMake(555, 390, 49, 199);
-                         graphAni5.frame=CGRectMake(634, 390, 49, 199);
+                         graphAni1.frame=CGRectMake(328, 432, 355, 199);
                          
                          
                      }
@@ -113,10 +101,7 @@
     text3.hidden=NO;
     
     graphAni1.hidden=NO;
-    graphAni2.hidden=NO;
-    graphAni3.hidden=NO;
-    graphAni4.hidden=NO;
-    graphAni5.hidden=NO;
+    
     [self graphAnimation];
     
     plate.hidden=YES;
@@ -135,10 +120,7 @@
     text3.hidden=YES;
     
     graphAni1.hidden=YES;
-    graphAni2.hidden=YES;
-    graphAni3.hidden=YES;
-    graphAni4.hidden=YES;
-    graphAni5.hidden=YES;
+
     
     plate.hidden=NO;
     number.hidden=NO;

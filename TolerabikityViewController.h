@@ -16,16 +16,20 @@
 @interface TolerabikityViewController : UIViewController<UIGestureRecognizerDelegate>
 {
     IBOutlet UIImageView *chapatiImg;
-    IBOutlet UIImageView *text1;
-    IBOutlet UIImageView *text2;
-    IBOutlet UIImageView *arrow;
+    IBOutlet UIImageView *flatChapati;
     IBOutlet UIButton *tapButton;
+    
+    IBOutlet UIView *grapView;
+    IBOutlet UIImageView *aniImg;
 }
 @property(nonatomic,retain)IBOutlet UIImageView *chapatiImg;
-@property(nonatomic,retain)IBOutlet UIImageView *text1;
-@property(nonatomic,retain)IBOutlet UIImageView *text2;
-@property(nonatomic,retain)IBOutlet UIImageView *arrow;
+@property(nonatomic,retain)IBOutlet UIImageView *flatChapati;
 @property(nonatomic,retain)IBOutlet UIButton *tapButton;
+
+@property(nonatomic,retain)IBOutlet UIView *grapView;
+@property(nonatomic,retain)IBOutlet UIImageView *aniImg;
+
+- (IBAction)closeAction:(id)sender;
 - (IBAction)efficancyAction:(id)sender;
 - (IBAction)potencyBtn:(id)sender;
 - (IBAction)tolerabikityAction:(id)sender;

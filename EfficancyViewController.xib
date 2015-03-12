@@ -38,17 +38,8 @@
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="9-7.png" translatesAutoresizingMaskIntoConstraints="NO" id="dmX-C3-3hr">
                     <rect key="frame" x="837" y="557" width="75" height="21"/>
                 </imageView>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q8a-A2-n01">
-                    <rect key="frame" x="30" y="711" width="143" height="33"/>
-                    <state key="normal" image="tab.png">
-                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                    </state>
-                    <connections>
-                        <action selector="efficancyAction:" destination="-1" eventType="touchUpInside" id="x0W-mt-Mvx"/>
-                    </connections>
-                </button>
                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NAQ-3j-UFo">
-                    <rect key="frame" x="216" y="711" width="143" height="33"/>
+                    <rect key="frame" x="30" y="711" width="143" height="33"/>
                     <state key="normal" image="9-8.png">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
@@ -90,6 +81,15 @@
                     </state>
                     <connections>
                         <action selector="homeAction:" destination="-1" eventType="touchUpInside" id="g6Y-Im-RbM"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q8a-A2-n01">
+                    <rect key="frame" x="216" y="711" width="143" height="33"/>
+                    <state key="normal" image="tab.png">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="efficancyAction:" destination="-1" eventType="touchUpInside" id="x0W-mt-Mvx"/>
                     </connections>
                 </button>
             </subviews>

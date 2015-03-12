@@ -6,6 +6,13 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ExcursionViewController">
             <connections>
+                <outlet property="graph1Animation" destination="Qge-FH-7h0" id="v6L-LK-0Wf"/>
+                <outlet property="graph2Animation" destination="7wE-ID-qsy" id="ctI-Rs-1Cg"/>
+                <outlet property="graphView1" destination="nnz-pj-W8a" id="AJF-0H-hjk"/>
+                <outlet property="graphView2" destination="iaU-Jm-cBn" id="a1l-8T-S6j"/>
+                <outlet property="graphView3" destination="Yh1-wr-upk" id="vdq-d1-12G"/>
+                <outlet property="line1Animation" destination="U0N-6q-otZ" id="mDM-1n-zKr"/>
+                <outlet property="line2Animation" destination="IGT-hX-R68" id="fzf-I4-rab"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -14,63 +21,222 @@
             <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="2-1.png" translatesAutoresizingMaskIntoConstraints="NO" id="Iev-PL-ygq">
+                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nnz-pj-W8a">
                     <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
-                </imageView>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mc8-Zb-jut">
-                    <rect key="frame" x="30" y="711" width="143" height="33"/>
-                    <state key="normal" image="tab.png">
-                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                    </state>
-                    <connections>
-                        <action selector="efficancyAction:" destination="-1" eventType="touchUpInside" id="yZR-7G-Pt6"/>
-                    </connections>
-                </button>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ajb-KX-T4b">
-                    <rect key="frame" x="216" y="711" width="143" height="33"/>
-                    <state key="normal" image="4-8.png">
-                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                    </state>
-                    <connections>
-                        <action selector="potencyBtn:" destination="-1" eventType="touchUpInside" id="YJd-T1-KHv"/>
-                    </connections>
-                </button>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4xX-tu-DUl">
-                    <rect key="frame" x="397" y="711" width="143" height="33"/>
-                    <state key="normal" image="4-9.png">
-                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                    </state>
-                    <connections>
-                        <action selector="tolerabikityAction:" destination="-1" eventType="touchUpInside" id="2mP-hl-ea9"/>
-                    </connections>
-                </button>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vvn-oi-WDK">
-                    <rect key="frame" x="583" y="711" width="143" height="33"/>
-                    <state key="normal" image="14-3.png">
-                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                    </state>
-                    <connections>
-                        <action selector="excursionAction:" destination="-1" eventType="touchUpInside" id="4l0-0B-Obv"/>
-                    </connections>
-                </button>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SJv-qY-p0u">
-                    <rect key="frame" x="766" y="711" width="143" height="33"/>
-                    <state key="normal" image="4-11.png">
-                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                    </state>
-                    <connections>
-                        <action selector="nephroAction:" destination="-1" eventType="touchUpInside" id="Yj8-Pm-hRt"/>
-                    </connections>
-                </button>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QXn-X2-zut">
-                    <rect key="frame" x="938" y="694" width="52" height="54"/>
-                    <state key="normal" image="2-6.png">
-                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                    </state>
-                    <connections>
-                        <action selector="homeAction:" destination="-1" eventType="touchUpInside" id="tEt-1K-UfB"/>
-                    </connections>
-                </button>
+                    <subviews>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="page16back.png" translatesAutoresizingMaskIntoConstraints="NO" id="LkT-Y3-w91">
+                            <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                        </imageView>
+                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1fU-jG-Y8U">
+                            <rect key="frame" x="766" y="711" width="143" height="33"/>
+                            <state key="normal" image="4-11.png">
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="nephroAction:" destination="-1" eventType="touchUpInside" id="W10-co-D2p"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WA0-hm-vjy">
+                            <rect key="frame" x="216" y="711" width="143" height="33"/>
+                            <state key="normal" image="tab.png">
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="efficancyAction:" destination="-1" eventType="touchUpInside" id="sji-lr-dWa"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fwj-ts-tdM">
+                            <rect key="frame" x="938" y="694" width="52" height="54"/>
+                            <state key="normal" image="2-6.png">
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="homeAction:" destination="-1" eventType="touchUpInside" id="ZdA-FG-XXb"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6yQ-Wp-bbq">
+                            <rect key="frame" x="397" y="711" width="143" height="33"/>
+                            <state key="normal" image="4-9.png">
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="tolerabikityAction:" destination="-1" eventType="touchUpInside" id="q2m-gZ-lc1"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vvL-ga-NSR">
+                            <rect key="frame" x="30" y="711" width="143" height="33"/>
+                            <state key="normal" image="4-8.png">
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="potencyBtn:" destination="-1" eventType="touchUpInside" id="nle-cw-Y7O"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jKk-VT-uQt">
+                            <rect key="frame" x="583" y="711" width="143" height="33"/>
+                            <state key="normal" image="14-3.png">
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="excursionAction:" destination="-1" eventType="touchUpInside" id="fuE-jH-s8u"/>
+                            </connections>
+                        </button>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="16-2.png" translatesAutoresizingMaskIntoConstraints="NO" id="64Y-we-za5">
+                            <rect key="frame" x="761" y="289" width="261" height="105"/>
+                        </imageView>
+                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gdd-Ck-k8S">
+                            <rect key="frame" x="261" y="408" width="207" height="215"/>
+                            <state key="normal">
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="gotoSU:" destination="-1" eventType="touchUpInside" id="rO6-Nh-wkJ"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                </view>
+                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="iaU-Jm-cBn">
+                    <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                    <subviews>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="page17back.png" translatesAutoresizingMaskIntoConstraints="NO" id="kfp-sj-lyd">
+                            <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                        </imageView>
+                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cZ2-pz-5Gx">
+                            <rect key="frame" x="766" y="711" width="143" height="33"/>
+                            <state key="normal" image="4-11.png">
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="nephroAction:" destination="-1" eventType="touchUpInside" id="exG-eW-bMP"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lco-RQ-G9W">
+                            <rect key="frame" x="216" y="711" width="143" height="33"/>
+                            <state key="normal" image="tab.png">
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="efficancyAction:" destination="-1" eventType="touchUpInside" id="HQa-eB-qPB"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rVx-xx-LEy">
+                            <rect key="frame" x="938" y="694" width="52" height="54"/>
+                            <state key="normal" image="2-6.png">
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="homeAction:" destination="-1" eventType="touchUpInside" id="Shl-Be-BPL"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JqS-9s-phX">
+                            <rect key="frame" x="397" y="711" width="143" height="33"/>
+                            <state key="normal" image="4-9.png">
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="tolerabikityAction:" destination="-1" eventType="touchUpInside" id="XeW-Cg-cN8"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ybw-88-Kzh">
+                            <rect key="frame" x="30" y="711" width="143" height="33"/>
+                            <state key="normal" image="4-8.png">
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="potencyBtn:" destination="-1" eventType="touchUpInside" id="Loz-Zl-20q"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zUf-Z2-ntL">
+                            <rect key="frame" x="583" y="711" width="143" height="33"/>
+                            <state key="normal" image="14-3.png">
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="excursionAction:" destination="-1" eventType="touchUpInside" id="wCS-t9-L3v"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y8v-sq-T3c">
+                            <rect key="frame" x="195" y="358" width="571" height="319"/>
+                            <state key="normal">
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="popupAndAnimateGraph:" destination="-1" eventType="touchUpInside" id="Aix-RY-m45"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                </view>
+                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Yh1-wr-upk">
+                    <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                    <subviews>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="page18Bac.png" translatesAutoresizingMaskIntoConstraints="NO" id="xKq-we-MUa">
+                            <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                        </imageView>
+                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UtW-yn-kzx">
+                            <rect key="frame" x="766" y="711" width="143" height="33"/>
+                            <state key="normal" image="4-11.png">
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="nephroAction:" destination="-1" eventType="touchUpInside" id="AL5-4K-d6V"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h1l-LP-Xv8">
+                            <rect key="frame" x="216" y="711" width="143" height="33"/>
+                            <state key="normal" image="tab.png">
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="efficancyAction:" destination="-1" eventType="touchUpInside" id="hCY-dz-E1n"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wPM-JN-ygu">
+                            <rect key="frame" x="938" y="694" width="52" height="54"/>
+                            <state key="normal" image="2-6.png">
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="homeAction:" destination="-1" eventType="touchUpInside" id="sWa-Zb-hZA"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tPo-t4-oxO">
+                            <rect key="frame" x="397" y="711" width="143" height="33"/>
+                            <state key="normal" image="4-9.png">
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="tolerabikityAction:" destination="-1" eventType="touchUpInside" id="E15-x8-9DO"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pvc-Gs-8hd">
+                            <rect key="frame" x="30" y="711" width="143" height="33"/>
+                            <state key="normal" image="4-8.png">
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="potencyBtn:" destination="-1" eventType="touchUpInside" id="LiT-m0-YPc"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Tz-U2-1wP">
+                            <rect key="frame" x="583" y="711" width="143" height="33"/>
+                            <state key="normal" image="14-3.png">
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="excursionAction:" destination="-1" eventType="touchUpInside" id="bdO-F1-VnN"/>
+                            </connections>
+                        </button>
+                        <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="graph17-1.png" translatesAutoresizingMaskIntoConstraints="NO" id="Qge-FH-7h0"/>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="graph17-3.png" translatesAutoresizingMaskIntoConstraints="NO" id="7wE-ID-qsy">
+                            <rect key="frame" x="718" y="304" width="278" height="283"/>
+                        </imageView>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="line1.png" translatesAutoresizingMaskIntoConstraints="NO" id="U0N-6q-otZ"/>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="line2.png" translatesAutoresizingMaskIntoConstraints="NO" id="IGT-hX-R68"/>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                </view>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <nil key="simulatedStatusBarMetrics"/>
@@ -78,15 +244,23 @@
             <nil key="simulatedBottomBarMetrics"/>
             <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="140" y="155"/>
         </view>
     </objects>
     <resources>
         <image name="14-3.png" width="300" height="69"/>
-        <image name="2-1.png" width="2134" height="1601"/>
+        <image name="16-2.png" width="547" height="219"/>
         <image name="2-6.png" width="113" height="113"/>
         <image name="4-11.png" width="300" height="69"/>
         <image name="4-8.png" width="300" height="69"/>
         <image name="4-9.png" width="300" height="69"/>
+        <image name="graph17-1.png" width="1107" height="303"/>
+        <image name="graph17-3.png" width="612" height="612"/>
+        <image name="line1.png" width="1230" height="12"/>
+        <image name="line2.png" width="603" height="12"/>
+        <image name="page16back.png" width="2136" height="1599"/>
+        <image name="page17back.png" width="2136" height="1600"/>
+        <image name="page18Bac.png" width="2134" height="1596"/>
         <image name="tab.png" width="300" height="69"/>
     </resources>
 </document>

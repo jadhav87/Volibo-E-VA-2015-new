@@ -13,34 +13,71 @@
 @end
 
 @implementation TolerabikityViewController
-@synthesize chapatiImg,text1,text2,arrow,tapButton;
+@synthesize chapatiImg,flatChapati,tapButton,grapView,aniImg;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     NSLog(@"TolerabikityViewController");
     
-    chapatiImg.userInteractionEnabled = YES;
+    flatChapati.hidden=YES;
+    grapView.hidden=YES;
     
+    chapatiImg.userInteractionEnabled = YES;
     UITapGestureRecognizer *tapGesture1 = [[UITapGestureRecognizer alloc] initWithTarget:self  action:@selector(tapGesture:)];
     
     tapGesture1.numberOfTapsRequired = 1;
     
     [tapGesture1 setDelegate:self];
-    
     [chapatiImg addGestureRecognizer:tapGesture1];
+    
+    //-------------------------------------------------------------------------------------------------------------------------------//
+    
+    flatChapati.userInteractionEnabled = YES;
+    UITapGestureRecognizer *tapGesture2 = [[UITapGestureRecognizer alloc] initWithTarget:self  action:@selector(graphView:)];
+    
+    tapGesture2.numberOfTapsRequired = 1;
+    
+    [tapGesture2 setDelegate:self];
+    
+    [flatChapati addGestureRecognizer:tapGesture2];
     
     // Do any additional setup after loading the view from its nib.
 }
+-(void)graphAnimation{
+    
+    aniImg.frame=CGRectMake(591, 590, 209, 0);
+    
+    [UIView animateWithDuration:1.0
+                          delay:0.1
+                        options: UIViewAnimationOptionCurveEaseIn
+                     animations:^{
+                         
+                         aniImg.frame=CGRectMake(591, 385, 209, 205);
+                         
+                         
+                     }
+                     completion:^(BOOL finished)
+     {
+     }];
+    
+}
+
 - (void) tapGesture: (id)sender
 {
-    UIImage *image = [UIImage imageNamed: @"11-1.png"];
-    [chapatiImg setImage:image];
-    text1.hidden=NO;
-    text2.hidden=NO;
-    arrow.hidden=NO;
+    flatChapati.hidden=NO;
     tapButton.hidden=NO;
-    NSLog(@"Tapped");
 }
+
+- (void) graphView: (id)sender
+{
+    grapView.hidden=NO;
+    [self graphAnimation];
+}
+
+- (IBAction)closeAction:(id)sender {
+    grapView.hidden=YES;
+}
+
 - (IBAction)efficancyAction:(id)sender {
     NSLog(@"efficancyAction");
     page2ViewController *page2ViewControllerObj=[[page2ViewController alloc]init];

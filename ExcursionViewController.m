@@ -13,11 +13,27 @@
 @end
 
 @implementation ExcursionViewController
+@synthesize graphView1,graphView2,graphView3,graph1Animation,graph2Animation,line1Animation,line2Animation;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     NSLog(@"ExcursionViewController");
+    graphView2.hidden=YES;
+    graphView3.hidden=YES;
+    
+    graphView3.userInteractionEnabled = YES;
+    UITapGestureRecognizer *tapGesture = [[UITapGestureRecognizer alloc] initWithTarget:self  action:@selector(graphView:)];
+    
+    tapGesture.numberOfTapsRequired = 1;
+    
+    [tapGesture setDelegate:self];
+    
+    [graphView3 addGestureRecognizer:tapGesture];
+}
+- (void) graphView: (id)sender
+{
+    graphView3.hidden=YES;
 }
 - (IBAction)efficancyAction:(id)sender {
     NSLog(@"efficancyAction");
@@ -60,6 +76,81 @@
 
 - (IBAction)tapAction:(id)sender {
     NSLog(@"This is tap action");
+}
+
+- (IBAction)gotoSU:(id)sender {
+     graphView2.hidden=NO;
+     graphView3.hidden=YES;
+}
+
+- (IBAction)popupAndAnimateGraph:(id)sender {
+    
+    graphView2.hidden=YES;
+    graphView3.hidden=NO;
+    [self graphAnimation];
+}
+-(void)graphAnimation{
+    
+    graph1Animation.frame=CGRectMake(100, 496, 530, 0);
+    line1Animation.frame=CGRectMake(280, 445, 0, 5);
+    line2Animation.frame=CGRectMake(595, 409, 0, 5);
+    [graph2Animation setAlpha:0.0f];
+    
+    [UIView animateWithDuration:1.0
+                          delay:0.1
+                        options: UIViewAnimationOptionCurveEaseIn
+                     animations:^{
+                         
+                         graph1Animation.frame=CGRectMake(100, 347, 530, 149);
+                         
+                         
+                     }
+                     completion:^(BOOL finished)
+     {
+     }];
+    
+    [UIView animateWithDuration:0.8
+                          delay:1.0
+                        options: UIViewAnimationOptionCurveEaseIn
+                     animations:^{
+                         
+                        [graph2Animation setAlpha:1.0f];
+                         
+                         
+                     }
+                     completion:^(BOOL finished)
+     {
+     }];
+    
+    
+    [UIView animateWithDuration:1.5
+                          delay:1.5
+                        options: UIViewAnimationOptionCurveEaseIn
+                     animations:^{
+                         
+                         line1Animation.frame=CGRectMake(280, 448, 592, 5);
+                         
+                         
+                     }
+                     completion:^(BOOL finished)
+     {
+     }];
+    
+    [UIView animateWithDuration:1.5
+                          delay:2.5
+                        options: UIViewAnimationOptionCurveEaseIn
+                     animations:^{
+                         
+                         line2Animation.frame=CGRectMake(595, 409, 290, 5);
+                         
+                         
+                     }
+                     completion:^(BOOL finished)
+     {
+     }];
+
+
+    
 }
 
 - (void)didReceiveMemoryWarning {

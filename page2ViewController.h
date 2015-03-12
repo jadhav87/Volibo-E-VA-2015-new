@@ -16,9 +16,46 @@
 
 @interface page2ViewController : UIViewController<UIGestureRecognizerDelegate>
 {
-    IBOutlet UIImageView *imageView;
+    IBOutlet UIImageView *plate1Img;
+    IBOutlet UIImageView *plate2Img;
+    IBOutlet UIImageView *plate3Img;
+    
+    IBOutlet UIImageView *drag1Img;
+    IBOutlet UIImageView *drag2Img;
+    IBOutlet UIImageView *drag3Img;
+    
+    IBOutlet UIImageView *d1;
+    IBOutlet UIImageView *d2;
+    IBOutlet UIImageView *d3;
+    
+    IBOutlet UIView *grapView1;
+    IBOutlet UIView *grapView2;
+    IBOutlet UIView *grapView3;
+    
+    IBOutlet UIImageView *grapAni;
+    IBOutlet UIImageView *grapAni2;
+    IBOutlet UIImageView *grapAni3;
+    
 }
-@property(nonatomic,retain)IBOutlet UIImageView *imageView;
+@property(nonatomic,retain)IBOutlet UIImageView *plate1Img;
+@property(nonatomic,retain)IBOutlet UIImageView *plate2Img;
+@property(nonatomic,retain)IBOutlet UIImageView *plate3Img;
+
+@property(nonatomic,retain)IBOutlet UIImageView *drag1Img;
+@property(nonatomic,retain)IBOutlet UIImageView *drag2Img;
+@property(nonatomic,retain)IBOutlet UIImageView *drag3Img;
+
+@property(nonatomic,retain)IBOutlet UIImageView *d1;
+@property(nonatomic,retain)IBOutlet UIImageView *d2;
+@property(nonatomic,retain)IBOutlet UIImageView *d3;
+
+@property(nonatomic,retain)IBOutlet UIView *grapView1;
+@property(nonatomic,retain)IBOutlet UIView *grapView2;
+@property(nonatomic,retain)IBOutlet UIView *grapView3;
+
+@property(nonatomic,retain)IBOutlet UIImageView *grapAni;
+@property(nonatomic,retain)IBOutlet UIImageView *grapAni2;
+@property(nonatomic,retain)IBOutlet UIImageView *grapAni3;
 
 - (IBAction)swipeRight:(UISwipeGestureRecognizer *)sender;
 - (IBAction)swipeLeft:(UISwipeGestureRecognizer *)sender;
@@ -28,5 +65,6 @@
 - (IBAction)excursionAction:(id)sender;
 - (IBAction)nephroAction:(id)sender;
 - (IBAction)homeAction:(id)sender;
+- (IBAction)closeAction:(id)sender;
 
 @end

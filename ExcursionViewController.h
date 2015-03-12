@@ -12,7 +12,27 @@
 #import "TolerabikityViewController.h"
 #import "NephroViewController.h"
 
-@interface ExcursionViewController : UIViewController
+@interface ExcursionViewController : UIViewController<UIGestureRecognizerDelegate>
+{
+    IBOutlet UIView *graphView1;
+    IBOutlet UIView *graphView2;
+    IBOutlet UIView *graphView3;
+    
+    IBOutlet UIImageView *graph1Animation;
+    IBOutlet UIImageView *graph2Animation;
+    
+    IBOutlet UIImageView *line1Animation;
+    IBOutlet UIImageView *line2Animation;
+    
+}
+@property(nonatomic,retain)IBOutlet UIView *graphView1;
+@property(nonatomic,retain)IBOutlet UIView *graphView2;
+@property(nonatomic,retain)IBOutlet UIView *graphView3;
+
+@property(nonatomic,retain)IBOutlet UIView *graph1Animation;
+@property(nonatomic,retain)IBOutlet UIView *graph2Animation;
+@property(nonatomic,retain)IBOutlet UIView *line1Animation;
+@property(nonatomic,retain)IBOutlet UIView *line2Animation;
 
 - (IBAction)efficancyAction:(id)sender;
 - (IBAction)potencyBtn:(id)sender;
@@ -21,4 +41,6 @@
 - (IBAction)nephroAction:(id)sender;
 - (IBAction)homeAction:(id)sender;
 - (IBAction)tapAction:(id)sender;
+- (IBAction)gotoSU:(id)sender;
+- (IBAction)popupAndAnimateGraph:(id)sender;
 @end

@@ -18,21 +18,12 @@
                     <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                 </imageView>
                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ghv-yL-lJi">
-                    <rect key="frame" x="30" y="711" width="143" height="33"/>
+                    <rect key="frame" x="216" y="711" width="143" height="33"/>
                     <state key="normal" image="tab.png">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
                     <connections>
                         <action selector="efficancyAction:" destination="-1" eventType="touchUpInside" id="3Ip-Zw-Eeh"/>
-                    </connections>
-                </button>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ogz-wd-KkZ">
-                    <rect key="frame" x="216" y="711" width="143" height="33"/>
-                    <state key="normal" image="4-8.png">
-                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                    </state>
-                    <connections>
-                        <action selector="potencyBtn:" destination="-1" eventType="touchUpInside" id="wsF-DS-dfC"/>
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vcV-ma-o5a">
@@ -69,6 +60,15 @@
                     </state>
                     <connections>
                         <action selector="homeAction:" destination="-1" eventType="touchUpInside" id="bVi-Pk-hNq"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ogz-wd-KkZ">
+                    <rect key="frame" x="30" y="711" width="143" height="33"/>
+                    <state key="normal" image="4-8.png">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="potencyBtn:" destination="-1" eventType="touchUpInside" id="wsF-DS-dfC"/>
                     </connections>
                 </button>
             </subviews>
