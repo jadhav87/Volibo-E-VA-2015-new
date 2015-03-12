@@ -55,8 +55,13 @@
                 
             }else if ([touch view] == dragaableTriVoliboImg){
                 dragaableTriVoliboImg.frame = CGRectMake(413, 232, 198, 198);
+                
+                [NSTimer scheduledTimerWithTimeInterval:0.20 target:self selector:@selector(gotoVolibotri)userInfo:nil repeats:NO];
+                
             }else if ([touch view] == dragaableVoliboMImg){
                 dragaableVoliboMImg.frame = CGRectMake(413, 232, 198, 198);
+                
+                 [NSTimer scheduledTimerWithTimeInterval:0.20 target:self selector:@selector(gotoVoliboM)userInfo:nil repeats:NO];
             }
             
         }else{
@@ -87,6 +92,14 @@
 -(void)gotoVolibo{
         Volibo_ViewController *Volibo_ViewControllerObj=[[Volibo_ViewController alloc]init];
         [self.navigationController pushViewController:Volibo_ViewControllerObj animated:NO];
+}
+-(void)gotoVoliboM{
+    VolibomViewController *VolibomViewControllerObj=[[VolibomViewController alloc]init];
+    [self.navigationController pushViewController:VolibomViewControllerObj animated:NO];
+}
+-(void)gotoVolibotri{
+    Trivolibo1 *Trivolibo1Obj=[[Trivolibo1 alloc]init];
+    [self.navigationController pushViewController:Trivolibo1Obj animated:NO];
 }
 - (void)viewDidLoad {
     [super viewDidLoad];

@@ -9,6 +9,8 @@
 #import <UIKit/UIKit.h>
 #import "Volibo_ViewController.h"
 #import "ViewController.h"
+#import "VolibomViewController.h"
+#import "Trivolibo1.h"
 
 @interface HomeViewController : UIViewController
 {

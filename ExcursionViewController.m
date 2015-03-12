@@ -13,7 +13,8 @@
 @end
 
 @implementation ExcursionViewController
-@synthesize graphView1,graphView2,graphView3,graph1Animation,graph2Animation,line1Animation,line2Animation;
+@synthesize graphView1,graphView2,graphView3,graphView4,graphView5,graphView6,graph1Animation,graph2Animation,line1Animation,line2Animation;
+@synthesize graph3Animation,graph4Animation,graphView7;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -21,6 +22,10 @@
     NSLog(@"ExcursionViewController");
     graphView2.hidden=YES;
     graphView3.hidden=YES;
+    graphView4.hidden=YES;
+    graphView5.hidden=YES;
+    graphView6.hidden=YES;
+    graphView7.hidden=YES;
     
     graphView3.userInteractionEnabled = YES;
     UITapGestureRecognizer *tapGesture = [[UITapGestureRecognizer alloc] initWithTarget:self  action:@selector(graphView:)];
@@ -34,6 +39,11 @@
 - (void) graphView: (id)sender
 {
     graphView3.hidden=YES;
+    graphView4.hidden=YES;
+    graphView5.hidden=YES;
+    graphView6.hidden=YES;
+    graphView2.hidden=NO;
+    graphView7.hidden=YES;
 }
 - (IBAction)efficancyAction:(id)sender {
     NSLog(@"efficancyAction");
@@ -81,14 +91,126 @@
 - (IBAction)gotoSU:(id)sender {
      graphView2.hidden=NO;
      graphView3.hidden=YES;
+     graphView4.hidden=YES;
+     graphView5.hidden=YES;
+     graphView6.hidden=YES;
+     graphView7.hidden=YES;
 }
 
 - (IBAction)popupAndAnimateGraph:(id)sender {
     
     graphView2.hidden=YES;
+    graphView4.hidden=YES;
+    graphView5.hidden=YES;
+    graphView6.hidden=YES;
     graphView3.hidden=NO;
+    graphView7.hidden=YES;
     [self graphAnimation];
 }
+
+- (IBAction)dropAction:(id)sender {
+    graphView3.hidden=YES;
+    graphView4.hidden=YES;
+    graphView5.hidden=NO;
+    graphView6.hidden=YES;
+    graphView2.hidden=YES;
+    graphView7.hidden=YES;
+}
+
+- (IBAction)gotoSu:(id)sender {
+    graphView2.hidden=NO;
+    graphView3.hidden=YES;
+    graphView4.hidden=YES;
+    graphView5.hidden=YES;
+    graphView6.hidden=YES;
+    graphView7.hidden=YES;
+}
+
+- (IBAction)gotoDPP4:(id)sender {
+    
+    graphView3.hidden=YES;
+    graphView4.hidden=NO;
+    graphView5.hidden=YES;
+    graphView6.hidden=YES;
+    graphView2.hidden=YES;
+    graphView7.hidden=YES;
+}
+
+- (IBAction)grap1Action:(id)sender {
+    
+    graphView2.hidden=YES;
+    graphView3.hidden=YES;
+    graphView4.hidden=YES;
+    graphView5.hidden=YES;
+    graphView6.hidden=NO;
+    graphView7.hidden=YES;
+    [self graphAnimation1];
+    
+}
+
+- (IBAction)graph2action:(id)sender {
+    
+    graphView2.hidden=YES;
+    graphView3.hidden=YES;
+    graphView4.hidden=YES;
+    graphView5.hidden=YES;
+    graphView6.hidden=YES;
+    graphView7.hidden=NO;
+    [self graphAnimation2];
+
+}
+
+- (IBAction)closeView6Action:(id)sender {
+    
+    graphView2.hidden=YES;
+    graphView3.hidden=YES;
+    graphView4.hidden=YES;
+    graphView5.hidden=NO;
+    graphView6.hidden=YES;
+    graphView7.hidden=YES;
+    
+}
+
+- (IBAction)closeView7Action:(id)sender {
+}
+-(void)graphAnimation2{
+    
+    graph4Animation.frame=CGRectMake(292, 453, 0, 120);
+    
+    [UIView animateWithDuration:1.5
+                          delay:0.1
+                        options: UIViewAnimationOptionCurveEaseIn
+                     animations:^{
+                         
+                         graph4Animation.frame=CGRectMake(295, 453, 316, 120);
+                         
+                         
+                     }
+                     completion:^(BOOL finished)
+     {
+     }];
+    
+}
+
+-(void)graphAnimation1{
+    
+    graph3Animation.frame=CGRectMake(292, 420, 0, 151);
+    
+    [UIView animateWithDuration:1.5
+                          delay:0.1
+                        options: UIViewAnimationOptionCurveEaseIn
+                     animations:^{
+                         
+                         graph3Animation.frame=CGRectMake(292, 420, 315, 151);
+                         
+                         
+                     }
+                     completion:^(BOOL finished)
+     {
+     }];
+    
+}
+
 -(void)graphAnimation{
     
     graph1Animation.frame=CGRectMake(100, 496, 530, 0);
