@@ -95,6 +95,8 @@
 
 - (IBAction)tolerabikityAction:(id)sender {
     NSLog(@"tolerabikityAction");
+    TolerabikityViewController *TolerabikityViewControllerObj=[[TolerabikityViewController alloc]init];
+    [self.navigationController pushViewController:TolerabikityViewControllerObj animated:NO];
     
 }
 

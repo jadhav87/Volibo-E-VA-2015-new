@@ -1,5 +1,5 @@
 //
-//  Trivolibo6.h
+//  Trivolibo7.h
 //  Volibo-E-VA-2015
 //
 //  Created by Vineet on 13/03/15.
@@ -8,13 +8,10 @@
 
 #import <UIKit/UIKit.h>
 #import "HomeViewController.h"
-#import "Trivolibo5.h"
-#import "Trivolibo7.h"
-@interface Trivolibo6 : UIViewController
-{
-    IBOutlet UIImageView *graphAnim;
-}
-@property(nonatomic,retain)IBOutlet UIImageView *graphAnim;
+#import "Trivolibo6.h"
+#import "Trivolibo9.h"
+
+@interface Trivolibo7 : UIViewController
 - (IBAction)homeAction:(id)sender;
 - (IBAction)swipeRight:(id)sender;
 - (IBAction)swipeLeft:(id)sender;

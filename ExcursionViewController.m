@@ -68,8 +68,8 @@
 
 - (IBAction)excursionAction:(id)sender {
     NSLog(@"excursionAction");
-//    EfficancyViewController *EfficancyViewControllerObj=[[EfficancyViewController alloc]init];
-//    [self.navigationController pushViewController:EfficancyViewControllerObj animated:NO];
+    ExcursionViewController *ExcursionViewControllerObj=[[ExcursionViewController alloc]init];
+    [self.navigationController pushViewController:ExcursionViewControllerObj animated:NO];
 }
 
 - (IBAction)nephroAction:(id)sender {

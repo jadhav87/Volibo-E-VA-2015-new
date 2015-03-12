@@ -174,6 +174,8 @@
 
 - (IBAction)efficancyAction:(id)sender {
     NSLog(@"efficancyAction");
+    page2ViewController *page2ViewControllerObj=[[page2ViewController alloc]init];
+    [self.navigationController pushViewController:page2ViewControllerObj animated:NO];
 }
 
 - (IBAction)potencyBtn:(id)sender {

@@ -1,49 +1,29 @@
 //
-//  Trivolibo6.m
+//  Trivolibo12.m
 //  Volibo-E-VA-2015
 //
 //  Created by Vineet on 13/03/15.
 //  Copyright (c) 2015 Vineet. All rights reserved.
 //
 
-#import "Trivolibo6.h"
+#import "Trivolibo12.h"
 
-@interface Trivolibo6 ()
+@interface Trivolibo12 ()
 
 @end
 
-@implementation Trivolibo6
-@synthesize graphAnim;
+@implementation Trivolibo12
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
-    [self graphAnimation];
-}
--(void)graphAnimation{
-    
-    graphAnim.frame=CGRectMake(357, 483, 1, 157);
-    
-    [UIView animateWithDuration:1.0
-                          delay:0.1
-                        options: UIViewAnimationOptionCurveEaseIn
-                     animations:^{
-                         
-                         graphAnim.frame=CGRectMake(357, 483, 355, 157);
-                         
-                         
-                     }
-                     completion:^(BOOL finished)
-     {
-     }];
-    
-    
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
 {
     if (interfaceOrientation==UIInterfaceOrientationLandscapeLeft || interfaceOrientation==UIInterfaceOrientationLandscapeRight)
@@ -67,15 +47,14 @@
 }
 
 - (IBAction)swipeRight:(id)sender {
-    Trivolibo5 *Trivolibo5Obj=[[Trivolibo5 alloc]init];
-    [self.navigationController pushViewController:Trivolibo5Obj animated:NO];
+    Trivolibo11 *Trivolibo11Obj=[[Trivolibo11 alloc]init];
+    [self.navigationController pushViewController:Trivolibo11Obj animated:NO];
 }
 
 - (IBAction)swipeLeft:(id)sender {
-    Trivolibo7 *Trivolibo7Obj=[[Trivolibo7 alloc]init];
-    [self.navigationController pushViewController:Trivolibo7Obj animated:NO];
+//    Trivolibo12 *Trivolibo12Obj=[[Trivolibo12 alloc]init];
+//    [self.navigationController pushViewController:Trivolibo12Obj animated:NO];
 }
-
 /*
 #pragma mark - Navigation
 

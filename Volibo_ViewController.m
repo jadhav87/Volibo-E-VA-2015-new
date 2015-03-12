@@ -89,8 +89,8 @@
 
 - (IBAction)swipeLeft:(UISwipeGestureRecognizer *)sender {
     
-    page2ViewController *page2ViewControllerObj=[[page2ViewController alloc]init];
-    [self.navigationController pushViewController:page2ViewControllerObj animated:NO];
+    EfficancyViewController *EfficancyViewControllerObj=[[EfficancyViewController alloc]init];
+    [self.navigationController pushViewController:EfficancyViewControllerObj animated:NO];
 }
 
 - (IBAction)popupAction:(id)sender {

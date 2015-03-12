@@ -49,6 +49,8 @@
 
 - (IBAction)nephroAction:(id)sender {
     NSLog(@"nephroAction");
+    NephroViewController *NephroViewControllerObj=[[NephroViewController alloc]init];
+    [self.navigationController pushViewController:NephroViewControllerObj animated:NO];
 }
 
 - (IBAction)homeAction:(id)sender {

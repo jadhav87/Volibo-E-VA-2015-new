@@ -26,6 +26,8 @@
 
 - (IBAction)potencyBtn:(id)sender {
     NSLog(@"potencyBtn");
+    EfficancyViewController *EfficancyViewControllerObj=[[EfficancyViewController alloc]init];
+    [self.navigationController pushViewController:EfficancyViewControllerObj animated:NO];
     
 }
 

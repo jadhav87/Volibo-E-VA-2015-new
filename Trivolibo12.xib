@@ -4,9 +4,8 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="Trivolibo6">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="Trivolibo12">
             <connections>
-                <outlet property="graphAnim" destination="z7a-P3-MWP" id="Fgj-N4-QpV"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -15,21 +14,18 @@
             <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="t8.png" translatesAutoresizingMaskIntoConstraints="NO" id="Avi-IN-f0w">
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="t13.png" translatesAutoresizingMaskIntoConstraints="NO" id="4An-sy-7N4">
                     <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                 </imageView>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tp8-UM-zb1">
-                    <rect key="frame" x="940" y="680" width="58" height="54"/>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gTe-wN-sFA">
+                    <rect key="frame" x="934" y="688" width="53" height="50"/>
                     <state key="normal">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
                     <connections>
-                        <action selector="homeAction:" destination="-1" eventType="touchUpInside" id="tCw-9F-4ih"/>
+                        <action selector="homeAction:" destination="-1" eventType="touchUpInside" id="d3c-OP-99q"/>
                     </connections>
                 </button>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="tGraph2.png" translatesAutoresizingMaskIntoConstraints="NO" id="z7a-P3-MWP">
-                    <rect key="frame" x="357" y="483" width="355" height="157"/>
-                </imageView>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <gestureRecognizers/>
@@ -39,24 +35,22 @@
             <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <connections>
-                <outletCollection property="gestureRecognizers" destination="3nE-ZF-RLF" appends="YES" id="jjP-Io-YXR"/>
-                <outletCollection property="gestureRecognizers" destination="jrK-og-Eti" appends="YES" id="Dum-8v-LM2"/>
+                <outletCollection property="gestureRecognizers" destination="adZ-My-Cht" appends="YES" id="tBG-hH-vsh"/>
+                <outletCollection property="gestureRecognizers" destination="qzC-uQ-ZVl" appends="YES" id="rbj-Rv-DmI"/>
             </connections>
-            <point key="canvasLocation" x="138" y="154"/>
         </view>
-        <swipeGestureRecognizer direction="right" id="3nE-ZF-RLF">
+        <swipeGestureRecognizer direction="right" id="adZ-My-Cht">
             <connections>
-                <action selector="swipeRight:" destination="-1" id="oLj-KA-tuZ"/>
+                <action selector="swipeRight:" destination="-1" id="DxB-Hz-D4l"/>
             </connections>
         </swipeGestureRecognizer>
-        <swipeGestureRecognizer direction="left" id="jrK-og-Eti">
+        <swipeGestureRecognizer direction="left" id="qzC-uQ-ZVl">
             <connections>
-                <action selector="swipeLeft:" destination="-1" id="cQT-p8-aMN"/>
+                <action selector="swipeLeft:" destination="-1" id="MZk-Kx-1vS"/>
             </connections>
         </swipeGestureRecognizer>
     </objects>
     <resources>
-        <image name="t8.png" width="2135" height="1602"/>
-        <image name="tGraph2.png" width="744" height="325"/>
+        <image name="t13.png" width="2152" height="1608"/>
     </resources>
 </document>
