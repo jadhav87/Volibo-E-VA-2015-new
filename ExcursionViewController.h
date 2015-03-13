@@ -11,6 +11,8 @@
 #import "EfficancyViewController.h"
 #import "TolerabikityViewController.h"
 #import "NephroViewController.h"
+#import <AVFoundation/AVFoundation.h>
+#import <MediaPlayer/MediaPlayer.h>
 
 @interface ExcursionViewController : UIViewController<UIGestureRecognizerDelegate>
 {
@@ -31,7 +33,11 @@
     IBOutlet UIImageView *graph3Animation;
     IBOutlet UIImageView *graph4Animation;
     
+    MPMoviePlayerViewController *moviePlayer;
+    MPMoviePlayerController *moviePlayerController;
+    
 }
+@property (strong, nonatomic) MPMoviePlayerController *videoPlayer;
 @property(nonatomic,retain)IBOutlet UIView *graphView1;
 @property(nonatomic,retain)IBOutlet UIView *graphView2;
 @property(nonatomic,retain)IBOutlet UIView *graphView3;

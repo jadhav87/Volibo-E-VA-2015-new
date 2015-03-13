@@ -20,6 +20,20 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     NSLog(@"ExcursionViewController");
+    
+    NSURL *url =[[NSBundle mainBundle] URLForResource:@"rice_animation" withExtension:@"mp4"];
+    
+    moviePlayerController = [[MPMoviePlayerController alloc] initWithContentURL:url];
+    [moviePlayerController.view setFrame:CGRectMake(0, 0, 1024, 768)];
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(moviePlayBackDidFinish:)
+                                                 name:MPMoviePlayerPlaybackDidFinishNotification
+                                               object:moviePlayerController];
+    [self.view addSubview:moviePlayerController.view];
+    moviePlayerController.fullscreen = YES;
+    moviePlayerController.controlStyle=MPMovieControlStyleNone;
+    [moviePlayerController play];
+    
     graphView2.hidden=YES;
     graphView3.hidden=YES;
     graphView4.hidden=YES;
@@ -35,6 +49,19 @@
     [tapGesture setDelegate:self];
     
     [graphView3 addGestureRecognizer:tapGesture];
+}
+- (void) moviePlayBackDidFinish:(NSNotification*)notification
+{
+    
+    MPMoviePlayerController *player = [notification object];
+    
+    [[NSNotificationCenter defaultCenter] removeObserver:self
+                                                    name:MPMoviePlayerPlaybackDidFinishNotification object:player];
+    
+    if ([player respondsToSelector:@selector(setFullscreen:animated:)])
+    {
+        [player.view removeFromSuperview];
+    }
 }
 - (void) graphView: (id)sender
 {
@@ -294,7 +321,9 @@
 {
     return YES;
 }
-
+-(void)setupButton{
+    
+}
 
 /*
 #pragma mark - Navigation
