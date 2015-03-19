@@ -13,10 +13,21 @@
 @end
 
 @implementation Trivolibo7
-
+@synthesize loopAnimation;
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+    
+    //---------------------------------------- image loop -----------------------------------------------------------------//
+    NSArray *imageNames = @[@"e1.png", @"e2.png", @"e3.png"];
+    NSMutableArray *images = [[NSMutableArray alloc] init];
+    for (int i = 0; i < imageNames.count; i++) {
+        [images addObject:[UIImage imageNamed:[imageNames objectAtIndex:i]]];
+    }
+    loopAnimation.animationImages = images;
+    loopAnimation.animationDuration = 1.5;
+    [loopAnimation startAnimating];
+
 }
 
 - (void)didReceiveMemoryWarning {

@@ -16,4 +16,5 @@
 - (IBAction)homeAction:(id)sender;
 - (IBAction)swipeRight:(id)sender;
 - (IBAction)swipeLeft:(id)sender;
+- (IBAction)popOut:(id)sender;
 @end

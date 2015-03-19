@@ -96,8 +96,8 @@
 }
 
 - (IBAction)swipeRight:(id)sender {
-    Trivolibo2 *Trivolibo2Obj=[[Trivolibo2 alloc]init];
-    [self.navigationController pushViewController:Trivolibo2Obj animated:NO];
+    Trivolibo1 *Trivolibo1Obj=[[Trivolibo1 alloc]init];
+    [self.navigationController pushViewController:Trivolibo1Obj animated:NO];
 }
 
 - (IBAction)swipeLeft:(id)sender {

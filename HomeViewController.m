@@ -94,8 +94,10 @@
         [self.navigationController pushViewController:Volibo_ViewControllerObj animated:NO];
 }
 -(void)gotoVoliboM{
-    VolibomViewController *VolibomViewControllerObj=[[VolibomViewController alloc]init];
-    [self.navigationController pushViewController:VolibomViewControllerObj animated:NO];
+//    VolibomViewController *VolibomViewControllerObj=[[VolibomViewController alloc]init];
+//    [self.navigationController pushViewController:VolibomViewControllerObj animated:NO];
+    Nepro1 *Nepro1Obj=[[Nepro1 alloc]init];
+    [self.navigationController pushViewController:Nepro1Obj animated:NO];
 }
 -(void)gotoVolibotri{
     Trivolibo1 *Trivolibo1Obj=[[Trivolibo1 alloc]init];

@@ -13,10 +13,11 @@
 @end
 
 @implementation TolerabikityViewController
-@synthesize chapatiImg,flatChapati,tapButton,grapView,aniImg;
-
+@synthesize chapatiImg,flatChapati,tapButton,grapView,aniImg,ref;
+@synthesize pdfView,webPdf;
 - (void)viewDidLoad {
     [super viewDidLoad];
+    val = FALSE;
     NSLog(@"TolerabikityViewController");
     
     flatChapati.hidden=YES;
@@ -42,6 +43,46 @@
     [flatChapati addGestureRecognizer:tapGesture2];
     
     // Do any additional setup after loading the view from its nib.
+    
+    //-------------------------------------------------------------------------------------------------------------------------------//
+    
+    val = FALSE;
+    
+    ref.userInteractionEnabled = YES;
+    UITapGestureRecognizer *tapGesture3 = [[UITapGestureRecognizer alloc] initWithTarget:self  action:@selector(pdfView:)];
+    
+    tapGesture3.numberOfTapsRequired = 1;
+    
+    [tapGesture3 setDelegate:self];
+    [ref addGestureRecognizer:tapGesture3];
+    
+    //-----------------------------------------------------------------------------------------------------------//
+    
+    grapView.userInteractionEnabled = YES;
+    UITapGestureRecognizer *tapGesture5 = [[UITapGestureRecognizer alloc] initWithTarget:self  action:@selector(closeGraph:)];
+    
+    tapGesture5.numberOfTapsRequired = 1;
+    
+    [tapGesture5 setDelegate:self];
+    [grapView addGestureRecognizer:tapGesture5];
+    
+    //--------------------------------------- load pdf -----------------------------------------------------//
+    NSString *path = [[NSBundle mainBundle] pathForResource:@"Diabetes Res Clin Pract_ 2002 Feb_55(2)_99-103." ofType:@"pdf"];
+    NSURL *targetURL = [NSURL fileURLWithPath:path];
+    NSURLRequest *request = [NSURLRequest requestWithURL:targetURL];
+    [[webPdf scrollView] setContentOffset:CGPointMake(0,500) animated:YES];
+    webPdf.backgroundColor = [UIColor clearColor];
+    [webPdf stringByEvaluatingJavaScriptFromString:[NSString stringWithFormat:@"window.scrollTo(0.0, 50.0)"]];
+    [webPdf loadRequest:request];
+
+}
+-(void)closeGraph: (id)sender{
+    grapView.hidden=YES;
+}
+- (void) pdfView: (id)sender
+{
+    pdfView.hidden = NO;
+    
 }
 -(void)graphAnimation{
     
@@ -72,6 +113,12 @@
 {
     grapView.hidden=NO;
     [self graphAnimation];
+}
+
+- (IBAction)closePdf:(id)sender {
+    pdfView.hidden = YES;
+    ref.hidden = YES;
+    val = FALSE;
 }
 
 - (IBAction)closeAction:(id)sender {
@@ -120,6 +167,34 @@
 
 - (IBAction)tapAction:(id)sender {
     NSLog(@"This is tap action");
+}
+
+- (IBAction)swipeRight:(id)sender {
+    
+    page2ViewController *page2ViewControllerObj=[[page2ViewController alloc]init];
+    [self.navigationController pushViewController:page2ViewControllerObj animated:NO];
+}
+
+- (IBAction)swipeLeft:(id)sender {
+    
+    ExcursionViewController *ExcursionViewControllerObj=[[ExcursionViewController alloc]init];
+    [self.navigationController pushViewController:ExcursionViewControllerObj animated:NO];
+}
+
+- (IBAction)refAction:(id)sender {
+    if (val == 0) {
+        ref.hidden = NO;
+        val = TRUE;
+    }else{
+        ref.hidden = YES;
+        val = FALSE;
+    }
+}
+
+- (IBAction)closeRefAction:(id)sender {
+    
+    ref.hidden = YES;
+    val = FALSE;
 }
 
 - (void)didReceiveMemoryWarning {

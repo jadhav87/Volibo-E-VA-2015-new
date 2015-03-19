@@ -13,7 +13,7 @@
 @end
 
 @implementation Trivolibo6
-@synthesize graphAnim;
+@synthesize graphAnim,tt1,tt2;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -22,20 +22,34 @@
 }
 -(void)graphAnimation{
     
-    graphAnim.frame=CGRectMake(357, 483, 1, 157);
+    [tt1 setAlpha:0.0];
+    [tt2 setAlpha:0.0];
     
     [UIView animateWithDuration:1.0
                           delay:0.1
                         options: UIViewAnimationOptionCurveEaseIn
                      animations:^{
                          
-                         graphAnim.frame=CGRectMake(357, 483, 355, 157);
+                         [tt2 setAlpha:1.0];
                          
                          
                      }
                      completion:^(BOOL finished)
      {
      }];
+    [UIView animateWithDuration:1.0
+                          delay:1.0
+                        options: UIViewAnimationOptionCurveEaseIn
+                     animations:^{
+                         
+                         [tt1 setAlpha:1.0];
+                         
+                         
+                     }
+                     completion:^(BOOL finished)
+     {
+     }];
+
     
     
 }

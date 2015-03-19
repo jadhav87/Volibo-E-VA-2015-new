@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6254" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6751" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="Volibo_ViewController">
             <connections>
                 <outlet property="closeBtn" destination="lhU-h8-Rvo" id="gVu-8m-yIR"/>
+                <outlet property="closePopup" destination="97K-lw-cBa" id="VoZ-z5-clk"/>
                 <outlet property="graphAni1" destination="JHl-jD-JAb" id="0pa-TR-fsP"/>
                 <outlet property="number" destination="GY8-wx-cqI" id="hBU-ra-ERT"/>
                 <outlet property="plate" destination="iQ7-gP-ILG" id="4En-ug-MhK"/>
@@ -23,7 +24,7 @@
             <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="2-1.png" translatesAutoresizingMaskIntoConstraints="NO" id="97K-lw-cBa">
+                <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="2-1.png" translatesAutoresizingMaskIntoConstraints="NO" id="97K-lw-cBa">
                     <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                 </imageView>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="2-2.png" translatesAutoresizingMaskIntoConstraints="NO" id="iQ7-gP-ILG">

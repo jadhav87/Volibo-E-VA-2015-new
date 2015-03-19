@@ -33,8 +33,31 @@
     IBOutlet UIImageView *graph3Animation;
     IBOutlet UIImageView *graph4Animation;
     
+    IBOutlet UIImageView *LoopAnimation;
+    
+    IBOutlet UIImageView *exgraph1;
+    IBOutlet UIImageView *exgraph2;
+    IBOutlet UIImageView *exgraph3;
+    IBOutlet UIImageView *exgraph4;
+    IBOutlet UIImageView *exgraph5;
+    
     MPMoviePlayerViewController *moviePlayer;
     MPMoviePlayerController *moviePlayerController;
+    
+    UIButton *button1;
+    UIButton *button2;
+    UIButton *button3;
+    UIButton *button4;
+    UIButton *button5;
+    UIButton *button6;
+    
+    IBOutlet UIImageView *ref;
+    IBOutlet UIImageView *ref2;
+    IBOutlet UIImageView *ref3;
+    
+    
+    Boolean val;
+    
     
 }
 @property (strong, nonatomic) MPMoviePlayerController *videoPlayer;
@@ -54,6 +77,35 @@
 @property(nonatomic,retain)IBOutlet UIImageView *graph3Animation;
 @property(nonatomic,retain)IBOutlet UIImageView *graph4Animation;
 
+@property(nonatomic,retain)IBOutlet UIImageView *LoopAnimation;
+@property(nonatomic,retain)IBOutlet UIImageView *ref;
+@property(nonatomic,retain)IBOutlet UIImageView *ref2;
+@property(nonatomic,retain)IBOutlet UIImageView *ref3;
+
+@property(nonatomic,retain)IBOutlet UIImageView *exgraph1;
+@property(nonatomic,retain)IBOutlet UIImageView *exgraph2;
+
+@property(nonatomic,retain)IBOutlet UIImageView *exgraph3;
+@property(nonatomic,retain)IBOutlet UIImageView *exgraph4;
+@property(nonatomic,retain)IBOutlet UIImageView *exgraph5;
+
+
+@property(nonatomic,retain)UIButton *button1;
+@property(nonatomic,retain)UIButton *button2;
+@property(nonatomic,retain)UIButton *button3;
+@property(nonatomic,retain)UIButton *button4;
+@property(nonatomic,retain)UIButton *button5;
+@property(nonatomic,retain)UIButton *button6;
+
+- (IBAction)swipeRight:(id)sender;
+- (IBAction)swipeLeft:(id)sender;
+- (IBAction)refAction:(id)sender;
+- (IBAction)closeRefAction:(id)sender;
+- (IBAction)ref2Action:(id)sender;
+- (IBAction)ref2closeAction:(id)sender;
+- (IBAction)ref3Action:(id)sender;
+- (IBAction)ref3closeAction:(id)sender;
+
 - (IBAction)efficancyAction:(id)sender;
 - (IBAction)potencyBtn:(id)sender;
 - (IBAction)tolerabikityAction:(id)sender;
@@ -70,4 +122,5 @@
 - (IBAction)graph2action:(id)sender;
 - (IBAction)closeView6Action:(id)sender;
 - (IBAction)closeView7Action:(id)sender;
+
 @end

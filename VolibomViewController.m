@@ -17,6 +17,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+    
+    NSLog(@"hi i am here");
 }
 
 - (void)didReceiveMemoryWarning {
@@ -60,5 +62,10 @@
     
     VoliboM2 *VoliboM2Obj=[[VoliboM2 alloc]init];
     [self.navigationController pushViewController:VoliboM2Obj animated:NO];
+}
+
+- (IBAction)swipeRight:(id)sender {
+    VolibomFirst *VolibomFirstObj=[[VolibomFirst alloc]init];
+    [self.navigationController pushViewController:VolibomFirstObj animated:NO];
 }
 @end

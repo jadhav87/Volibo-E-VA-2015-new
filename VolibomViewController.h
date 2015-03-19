@@ -9,9 +9,11 @@
 #import <UIKit/UIKit.h>
 #import "HomeViewController.h"
 #import "VoliboM2.h"
+#import "VolibomFirst.h"
 
 @interface VolibomViewController : UIViewController
 - (IBAction)homeAction:(id)sender;
 - (IBAction)swipeLeft:(id)sender;
+- (IBAction)swipeRight:(id)sender;
 
 @end

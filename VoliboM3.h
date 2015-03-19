@@ -9,6 +9,8 @@
 #import <UIKit/UIKit.h>
 #import "HomeViewController.h"
 #import "VoliboM2.h"
+#import "Trivolibo12.h"
+#import "Header.h"
 
 @interface VoliboM3 : UIViewController<UIGestureRecognizerDelegate>
 {

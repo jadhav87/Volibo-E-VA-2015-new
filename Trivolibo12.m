@@ -47,8 +47,22 @@
 }
 
 - (IBAction)swipeRight:(id)sender {
-    Trivolibo11 *Trivolibo11Obj=[[Trivolibo11 alloc]init];
-    [self.navigationController pushViewController:Trivolibo11Obj animated:NO];
+    
+    if (pageValue == 1) {
+        NephroViewController *NephroViewControllerObj=[[NephroViewController alloc]init];
+        [self.navigationController pushViewController:NephroViewControllerObj animated:NO];
+    }
+    
+    if (pageValue == 2) {
+        VoliboM3 *VoliboM3Obj=[[VoliboM3 alloc]init];
+        [self.navigationController pushViewController:VoliboM3Obj animated:NO];
+    }
+    
+    if (pageValue == 3) {
+        Trivolibo11 *Trivolibo11Obj=[[Trivolibo11 alloc]init];
+        [self.navigationController pushViewController:Trivolibo11Obj animated:NO];
+    }
+   
 }
 
 - (IBAction)swipeLeft:(id)sender {

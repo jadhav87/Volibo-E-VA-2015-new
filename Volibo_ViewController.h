@@ -10,8 +10,10 @@
 #import "HomeViewController.h"
 #import "page2ViewController.h"
 #import "EfficancyViewController.h"
+#import <AVFoundation/AVFoundation.h>
+#import <MediaPlayer/MediaPlayer.h>
 
-@interface Volibo_ViewController : UIViewController
+@interface Volibo_ViewController : UIViewController<UIGestureRecognizerDelegate>
 {
     IBOutlet UIImageView *plate;
     IBOutlet UIImageView *number;
@@ -20,11 +22,17 @@
     IBOutlet UIImageView *text3;
     IBOutlet UIImageView *popupImg;
     
+    IBOutlet UIImageView *closePopup;
+    
     IBOutlet UIImageView *graphAni1;
     
     IBOutlet UIButton *popup;
     IBOutlet UIButton *closeBtn;
+    
+    MPMoviePlayerViewController *moviePlayer;
+    MPMoviePlayerController *moviePlayerController;
 }
+@property (strong, nonatomic) MPMoviePlayerController *videoPlayer;
 @property(nonatomic,retain)IBOutlet UIImageView *plate;
 @property(nonatomic,retain)IBOutlet UIImageView *number;
 @property(nonatomic,retain)IBOutlet UIImageView *text1;
@@ -33,6 +41,8 @@
 @property(nonatomic,retain)IBOutlet UIImageView *popupImg;
 
 @property(nonatomic,retain)IBOutlet UIImageView *graphAni1;
+
+@property(nonatomic,retain)IBOutlet UIImageView *closePopup;
 
 @property(nonatomic,retain)IBOutlet UIButton *popup;
 @property(nonatomic,retain)IBOutlet UIButton *closeBtn;

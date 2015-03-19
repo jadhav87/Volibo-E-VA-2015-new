@@ -11,6 +11,10 @@
 #import "Trivolibo7.h"
 #import "Trivolibo10.h"
 @interface Trivolibo9 : UIViewController
+{
+    IBOutlet UIImageView *loopAnimation;
+}
+@property(nonatomic,retain)IBOutlet UIImageView *loopAnimation;
 - (IBAction)homeAction:(id)sender;
 - (IBAction)swipeRight:(id)sender;
 - (IBAction)swipeLeft:(id)sender;

@@ -13,10 +13,20 @@
 @end
 
 @implementation Trivolibo11
+@synthesize loopAnimation;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+    //---------------------------------------- image loop -----------------------------------------------------------------//
+    NSArray *imageNames = @[@"e1.png", @"e2.png", @"e3.png"];
+    NSMutableArray *images = [[NSMutableArray alloc] init];
+    for (int i = 0; i < imageNames.count; i++) {
+        [images addObject:[UIImage imageNamed:[imageNames objectAtIndex:i]]];
+    }
+    loopAnimation.animationImages = images;
+    loopAnimation.animationDuration = 1.5;
+    [loopAnimation startAnimating];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -53,6 +63,7 @@
 - (IBAction)swipeLeft:(id)sender {
     Trivolibo12 *Trivolibo12Obj=[[Trivolibo12 alloc]init];
     [self.navigationController pushViewController:Trivolibo12Obj animated:NO];
+    pageValue = 3;
 }
 
 /*

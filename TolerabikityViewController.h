@@ -21,6 +21,12 @@
     
     IBOutlet UIView *grapView;
     IBOutlet UIImageView *aniImg;
+    
+    IBOutlet UIImageView *ref;
+    Boolean val;
+    
+    IBOutlet UIView *pdfView;
+    IBOutlet UIWebView *webPdf;
 }
 @property(nonatomic,retain)IBOutlet UIImageView *chapatiImg;
 @property(nonatomic,retain)IBOutlet UIImageView *flatChapati;
@@ -28,6 +34,11 @@
 
 @property(nonatomic,retain)IBOutlet UIView *grapView;
 @property(nonatomic,retain)IBOutlet UIImageView *aniImg;
+
+@property(nonatomic,retain)IBOutlet UIImageView *ref;
+@property(nonatomic,retain)IBOutlet UIView *pdfView;
+@property(nonatomic,retain)IBOutlet UIWebView *webPdf;
+- (IBAction)closePdf:(id)sender;
 
 - (IBAction)closeAction:(id)sender;
 - (IBAction)efficancyAction:(id)sender;
@@ -37,4 +48,8 @@
 - (IBAction)nephroAction:(id)sender;
 - (IBAction)homeAction:(id)sender;
 - (IBAction)tapAction:(id)sender;
+- (IBAction)swipeRight:(id)sender;
+- (IBAction)swipeLeft:(id)sender;
+- (IBAction)refAction:(id)sender;
+- (IBAction)closeRefAction:(id)sender;
 @end

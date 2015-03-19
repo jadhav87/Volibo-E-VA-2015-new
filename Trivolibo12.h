@@ -9,6 +9,8 @@
 #import <UIKit/UIKit.h>
 #import "HomeViewController.h"
 #import "Trivolibo11.h"
+#import "NephroViewController.h"
+#import "VoliboM3.h"
 
 @interface Trivolibo12 : UIViewController
 - (IBAction)homeAction:(id)sender;

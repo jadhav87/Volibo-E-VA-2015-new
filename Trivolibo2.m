@@ -46,13 +46,18 @@
 }
 
 - (IBAction)swipeRight:(id)sender {
-    Trivolibo1 *Trivolibo1Obj=[[Trivolibo1 alloc]init];
-    [self.navigationController pushViewController:Trivolibo1Obj animated:NO];
+//    Trivolibo1 *Trivolibo1Obj=[[Trivolibo1 alloc]init];
+//    [self.navigationController pushViewController:Trivolibo1Obj animated:NO];
 }
 
 - (IBAction)swipeLeft:(id)sender {
     Trivolibo3 *Trivolibo3Obj=[[Trivolibo3 alloc]init];
     [self.navigationController pushViewController:Trivolibo3Obj animated:NO];
+}
+
+- (IBAction)popOut:(id)sender {
+    Trivolibo1 *Trivolibo1Obj=[[Trivolibo1 alloc]init];
+    [self.navigationController pushViewController:Trivolibo1Obj animated:NO];
 }
 
 /*

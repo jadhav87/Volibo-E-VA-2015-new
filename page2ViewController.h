@@ -36,6 +36,19 @@
     IBOutlet UIImageView *grapAni2;
     IBOutlet UIImageView *grapAni3;
     
+    IBOutlet UIImageView *ref;
+    IBOutlet UIImageView *ref2;
+    IBOutlet UIImageView *ref3;
+    Boolean val;
+    
+    IBOutlet UIView *pdfview1;
+    IBOutlet UIView *pdfview2;
+    IBOutlet UIView *pdfview3;
+    
+    IBOutlet UIWebView *pdf1;
+    IBOutlet UIWebView *pdf2;
+    IBOutlet UIWebView *pdf3;
+    
 }
 @property(nonatomic,retain)IBOutlet UIImageView *plate1Img;
 @property(nonatomic,retain)IBOutlet UIImageView *plate2Img;
@@ -48,6 +61,7 @@
 @property(nonatomic,retain)IBOutlet UIImageView *d1;
 @property(nonatomic,retain)IBOutlet UIImageView *d2;
 @property(nonatomic,retain)IBOutlet UIImageView *d3;
+- (IBAction)closePdf:(id)sender;
 
 @property(nonatomic,retain)IBOutlet UIView *grapView1;
 @property(nonatomic,retain)IBOutlet UIView *grapView2;
@@ -57,6 +71,24 @@
 @property(nonatomic,retain)IBOutlet UIImageView *grapAni2;
 @property(nonatomic,retain)IBOutlet UIImageView *grapAni3;
 
+@property(nonatomic,retain)IBOutlet UIImageView *ref;
+@property(nonatomic,retain)IBOutlet UIImageView *ref2;
+@property(nonatomic,retain)IBOutlet UIImageView *ref3;
+
+@property(nonatomic,retain)IBOutlet UIView *pdfview1;
+@property(nonatomic,retain)IBOutlet UIView *pdfview2;
+@property(nonatomic,retain)IBOutlet UIView *pdfview3;
+
+@property(nonatomic,retain)IBOutlet UIWebView *pdf1;
+@property(nonatomic,retain)IBOutlet UIWebView *pdf2;
+@property(nonatomic,retain)IBOutlet UIWebView *pdf3;
+
+- (IBAction)reAction:(id)sender;
+- (IBAction)closeRef:(id)sender;
+- (IBAction)re2Action:(id)sender;
+- (IBAction)closere2Action:(id)sender;
+- (IBAction)re3Action:(id)sender;
+- (IBAction)closere3Action:(id)sender;
 - (IBAction)swipeRight:(UISwipeGestureRecognizer *)sender;
 - (IBAction)swipeLeft:(UISwipeGestureRecognizer *)sender;
 - (IBAction)efficancyAction:(id)sender;

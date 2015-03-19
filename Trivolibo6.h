@@ -13,8 +13,12 @@
 @interface Trivolibo6 : UIViewController
 {
     IBOutlet UIImageView *graphAnim;
+    IBOutlet UIImageView *tt1;
+    IBOutlet UIImageView *tt2;
 }
 @property(nonatomic,retain)IBOutlet UIImageView *graphAnim;
+@property(nonatomic,retain)IBOutlet UIImageView *tt1;
+@property(nonatomic,retain)IBOutlet UIImageView *tt2;
 - (IBAction)homeAction:(id)sender;
 - (IBAction)swipeRight:(id)sender;
 - (IBAction)swipeLeft:(id)sender;

@@ -18,7 +18,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
-   
+    NSLog(@"hey i am here");
     popupView.hidden=YES;
     
     popupView.userInteractionEnabled = YES;
@@ -70,8 +70,9 @@
 
 - (IBAction)swipeLeft:(UISwipeGestureRecognizer *)sender {
     
-    VoliboM3 *VoliboM3Obj=[[VoliboM3 alloc]init];
-    [self.navigationController pushViewController:VoliboM3Obj animated:NO];
+    Trivolibo12 *Trivolibo12Obj=[[Trivolibo12 alloc]init];
+    [self.navigationController pushViewController:Trivolibo12Obj animated:NO];
+    pageValue = 2;
 }
 
 - (IBAction)popupAction:(id)sender {

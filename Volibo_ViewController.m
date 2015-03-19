@@ -14,7 +14,7 @@
 
 @implementation Volibo_ViewController
 @synthesize plate,number,text1,text2,text3,popup,popupImg,closeBtn;
-@synthesize graphAni1;
+@synthesize graphAni1,closePopup;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -24,8 +24,61 @@
     graphAni1.hidden=YES;
     closeBtn.hidden=YES;
     text3.hidden=YES;
-}
+    
+    closePopup.userInteractionEnabled = YES;
+    UITapGestureRecognizer *tapGesture = [[UITapGestureRecognizer alloc] initWithTarget:self  action:@selector(graphView)];
+    
+    tapGesture.numberOfTapsRequired = 1;
+    
+    [tapGesture setDelegate:self];
+    
+    [closePopup addGestureRecognizer:tapGesture];
+    
+    
+    NSURL *url =[[NSBundle mainBundle] URLForResource:@"VOLIBO_x264" withExtension:@"mp4"];
+    
+    moviePlayerController = [[MPMoviePlayerController alloc] initWithContentURL:url];
+    [moviePlayerController.view setFrame:CGRectMake(0, 0, 1024, 768)];
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(moviePlayBackDidFinish:)
+                                                 name:MPMoviePlayerPlaybackDidFinishNotification
+                                               object:moviePlayerController];
+    [self.view addSubview:moviePlayerController.view];
+    moviePlayerController.fullscreen = YES;
+    moviePlayerController.controlStyle=MPMovieControlStyleNone;
+    [moviePlayerController play];
 
+}
+- (void) moviePlayBackDidFinish:(NSNotification*)notification
+{
+    
+    MPMoviePlayerController *player = [notification object];
+    
+    [[NSNotificationCenter defaultCenter] removeObserver:self
+                                                    name:MPMoviePlayerPlaybackDidFinishNotification object:player];
+    
+    if ([player respondsToSelector:@selector(setFullscreen:animated:)])
+    {
+        [player.view removeFromSuperview];
+        
+    }
+}
+-(void)graphView{
+    
+    popupImg.hidden=YES;
+    closeBtn.hidden=YES;
+    text3.hidden=YES;
+    
+    graphAni1.hidden=YES;
+    
+    
+    plate.hidden=NO;
+    number.hidden=NO;
+    text1.hidden=NO;
+    text2.hidden=NO;
+    popup.hidden=NO;
+    
+}
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
@@ -77,18 +130,22 @@
 
 - (IBAction)gotoHome:(id)sender {
     
+    [moviePlayerController stop];
+    
     HomeViewController *HomeViewControllerObj=[[HomeViewController alloc]init];
     [self.navigationController pushViewController:HomeViewControllerObj animated:NO];
 }
 
 - (IBAction)swipeRight:(UISwipeGestureRecognizer *)sender {
     
+    [moviePlayerController stop];
     HomeViewController *HomeViewControllerObj=[[HomeViewController alloc]init];
     [self.navigationController pushViewController:HomeViewControllerObj animated:NO];
 }
 
 - (IBAction)swipeLeft:(UISwipeGestureRecognizer *)sender {
     
+    [moviePlayerController stop];
     EfficancyViewController *EfficancyViewControllerObj=[[EfficancyViewController alloc]init];
     [self.navigationController pushViewController:EfficancyViewControllerObj animated:NO];
 }

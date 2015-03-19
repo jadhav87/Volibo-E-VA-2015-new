@@ -73,12 +73,27 @@
                 </button>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <gestureRecognizers/>
             <nil key="simulatedStatusBarMetrics"/>
             <nil key="simulatedTopBarMetrics"/>
             <nil key="simulatedBottomBarMetrics"/>
             <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outletCollection property="gestureRecognizers" destination="vZe-sm-MmZ" appends="YES" id="mpK-Fv-baz"/>
+                <outletCollection property="gestureRecognizers" destination="j00-hW-yEk" appends="YES" id="QsP-rv-NMZ"/>
+            </connections>
         </view>
+        <swipeGestureRecognizer direction="right" id="vZe-sm-MmZ">
+            <connections>
+                <action selector="swipeRight:" destination="-1" id="mcM-87-QVs"/>
+            </connections>
+        </swipeGestureRecognizer>
+        <swipeGestureRecognizer direction="left" id="j00-hW-yEk">
+            <connections>
+                <action selector="swipeLeft:" destination="-1" id="DIq-8F-c2n"/>
+            </connections>
+        </swipeGestureRecognizer>
     </objects>
     <resources>
         <image name="2-1.png" width="2134" height="1601"/>

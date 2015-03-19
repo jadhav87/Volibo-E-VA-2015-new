@@ -18,9 +18,6 @@
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="pagem3.png" translatesAutoresizingMaskIntoConstraints="NO" id="diE-d4-ab1">
                     <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                 </imageView>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="graphm1.png" translatesAutoresizingMaskIntoConstraints="NO" id="l1x-BV-IcZ">
-                    <rect key="frame" x="86" y="513" width="342" height="148"/>
-                </imageView>
                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z0a-xh-ROl">
                     <rect key="frame" x="943" y="689" width="53" height="52"/>
                     <state key="normal">
@@ -82,7 +79,6 @@
         </swipeGestureRecognizer>
     </objects>
     <resources>
-        <image name="graphm1.png" width="716" height="306"/>
         <image name="pagem3.png" width="2130" height="1597"/>
         <image name="pagem4.png" width="2127" height="1597"/>
     </resources>
