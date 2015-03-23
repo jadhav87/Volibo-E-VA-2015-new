@@ -12,6 +12,7 @@
 #import "EfficancyViewController.h"
 #import <AVFoundation/AVFoundation.h>
 #import <MediaPlayer/MediaPlayer.h>
+#import "VLandingPage.h"
 
 @interface Volibo_ViewController : UIViewController<UIGestureRecognizerDelegate>
 {

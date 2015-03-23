@@ -12,6 +12,8 @@
 #import "page2ViewController.h"
 #import "ExcursionViewController.h"
 #import "NephroViewController.h"
+#import <AVFoundation/AVFoundation.h>
+#import <MediaPlayer/MediaPlayer.h>
 
 @interface TolerabikityViewController : UIViewController<UIGestureRecognizerDelegate>
 {
@@ -27,7 +29,25 @@
     
     IBOutlet UIView *pdfView;
     IBOutlet UIWebView *webPdf;
+    
+    MPMoviePlayerViewController *moviePlayer;
+    MPMoviePlayerController *moviePlayerController;
+    
+    UIButton *button1;
+    UIButton *button2;
+    UIButton *button3;
+    UIButton *button4;
+    UIButton *button5;
+    UIButton *button6;
+   //----------------------------------------------------------------//
 }
+@property(nonatomic,retain)UIButton *button1;
+@property(nonatomic,retain)UIButton *button2;
+@property(nonatomic,retain)UIButton *button3;
+@property(nonatomic,retain)UIButton *button4;
+@property(nonatomic,retain)UIButton *button5;
+@property(nonatomic,retain)UIButton *button6;
+@property (strong, nonatomic) MPMoviePlayerController *videoPlayer;
 @property(nonatomic,retain)IBOutlet UIImageView *chapatiImg;
 @property(nonatomic,retain)IBOutlet UIImageView *flatChapati;
 @property(nonatomic,retain)IBOutlet UIButton *tapButton;

@@ -17,9 +17,10 @@
 @synthesize graphAni1,closePopup;
 
 - (void)viewDidLoad {
+    
     [super viewDidLoad];
-   
     // Do any additional setup after loading the view from its nib.
+    
     popupImg.hidden=YES;
     graphAni1.hidden=YES;
     closeBtn.hidden=YES;
@@ -33,36 +34,9 @@
     [tapGesture setDelegate:self];
     
     [closePopup addGestureRecognizer:tapGesture];
-    
-    
-    NSURL *url =[[NSBundle mainBundle] URLForResource:@"VOLIBO_x264" withExtension:@"mp4"];
-    
-    moviePlayerController = [[MPMoviePlayerController alloc] initWithContentURL:url];
-    [moviePlayerController.view setFrame:CGRectMake(0, 0, 1024, 768)];
-    [[NSNotificationCenter defaultCenter] addObserver:self
-                                             selector:@selector(moviePlayBackDidFinish:)
-                                                 name:MPMoviePlayerPlaybackDidFinishNotification
-                                               object:moviePlayerController];
-    [self.view addSubview:moviePlayerController.view];
-    moviePlayerController.fullscreen = YES;
-    moviePlayerController.controlStyle=MPMovieControlStyleNone;
-    [moviePlayerController play];
 
 }
-- (void) moviePlayBackDidFinish:(NSNotification*)notification
-{
-    
-    MPMoviePlayerController *player = [notification object];
-    
-    [[NSNotificationCenter defaultCenter] removeObserver:self
-                                                    name:MPMoviePlayerPlaybackDidFinishNotification object:player];
-    
-    if ([player respondsToSelector:@selector(setFullscreen:animated:)])
-    {
-        [player.view removeFromSuperview];
-        
-    }
-}
+
 -(void)graphView{
     
     popupImg.hidden=YES;
@@ -138,14 +112,12 @@
 
 - (IBAction)swipeRight:(UISwipeGestureRecognizer *)sender {
     
-    [moviePlayerController stop];
-    HomeViewController *HomeViewControllerObj=[[HomeViewController alloc]init];
-    [self.navigationController pushViewController:HomeViewControllerObj animated:NO];
+    VLandingPage *VLandingPageObj=[[VLandingPage alloc]init];
+    [self.navigationController pushViewController:VLandingPageObj animated:NO];
 }
 
 - (IBAction)swipeLeft:(UISwipeGestureRecognizer *)sender {
     
-    [moviePlayerController stop];
     EfficancyViewController *EfficancyViewControllerObj=[[EfficancyViewController alloc]init];
     [self.navigationController pushViewController:EfficancyViewControllerObj animated:NO];
 }

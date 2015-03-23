@@ -12,7 +12,7 @@
 #import "Trivolibo3.h"
 #import <AVFoundation/AVFoundation.h>
 #import <MediaPlayer/MediaPlayer.h>
-
+#import "TLandingPage.h"
 @interface Trivolibo1 : UIViewController
 {
     MPMoviePlayerViewController *moviePlayer;
@@ -22,4 +22,5 @@
 - (IBAction)swipeLeft:(id)sender;
 - (IBAction)homeAction:(id)sender;
 - (IBAction)popupView:(id)sender;
+- (IBAction)swipeRight:(id)sender;
 @end

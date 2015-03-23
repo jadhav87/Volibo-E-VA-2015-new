@@ -38,6 +38,12 @@
     moviePlayerController.controlStyle=MPMovieControlStyleNone;
     [moviePlayerController play];
     
+    /* add tap handler */
+    UITapGestureRecognizer *singleFingerTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(onPlayerTapped:)];
+    singleFingerTap.numberOfTapsRequired = 1;
+    singleFingerTap.delegate = self;
+    [moviePlayerController.view addGestureRecognizer:singleFingerTap];
+    
     graphView2.hidden=YES;
     graphView3.hidden=YES;
     graphView4.hidden=YES;
@@ -134,7 +140,7 @@
         [images addObject:[UIImage imageNamed:[imageNames objectAtIndex:i]]];
     }
     LoopAnimation.animationImages = images;
-    LoopAnimation.animationDuration = 0.5;
+    LoopAnimation.animationDuration = 1.0;
     [LoopAnimation startAnimating];
 
 }
@@ -159,6 +165,17 @@
     {
         [player.view removeFromSuperview];
     }
+}
+-(void) onPlayerTapped:(UIGestureRecognizer *)gestureRecognizer {
+    NSLog(@"i am in video view");
+    [moviePlayerController.view removeFromSuperview];
+}
+- (BOOL)gestureRecognizer:(UIGestureRecognizer *)gestureRecognizer shouldReceiveTouch:(UITouch *)touch {
+    return YES;
+}
+// this enables you to handle multiple recognizers on single view
+- (BOOL)gestureRecognizer:(UIGestureRecognizer *)gestureRecognizer shouldRecognizeSimultaneouslyWithGestureRecognizer:(UIGestureRecognizer *)otherGestureRecognizer {
+    return YES;
 }
 - (void) graphView: (id)sender
 {

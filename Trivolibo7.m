@@ -19,13 +19,13 @@
     // Do any additional setup after loading the view from its nib.
     
     //---------------------------------------- image loop -----------------------------------------------------------------//
-    NSArray *imageNames = @[@"e1.png", @"e2.png", @"e3.png"];
+    NSArray *imageNames = @[@"mov1.png", @"mov2.png", @"mov3.png", @"mov4.png"];
     NSMutableArray *images = [[NSMutableArray alloc] init];
     for (int i = 0; i < imageNames.count; i++) {
         [images addObject:[UIImage imageNamed:[imageNames objectAtIndex:i]]];
     }
     loopAnimation.animationImages = images;
-    loopAnimation.animationDuration = 1.5;
+    loopAnimation.animationDuration = 4.0;
     [loopAnimation startAnimating];
 
 }
@@ -62,8 +62,9 @@
 }
 
 - (IBAction)swipeLeft:(id)sender {
-    Trivolibo9 *Trivolibo9Obj=[[Trivolibo9 alloc]init];
-    [self.navigationController pushViewController:Trivolibo9Obj animated:NO];
+    pageValue = 3;
+    Trivolibo12 *Trivolibo12Obj=[[Trivolibo12 alloc]init];
+    [self.navigationController pushViewController:Trivolibo12Obj animated:NO];
 }
 
 /*

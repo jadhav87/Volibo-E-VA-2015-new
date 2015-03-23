@@ -65,7 +65,7 @@
 }
 
 - (IBAction)swipeRight:(id)sender {
-    VolibomFirst *VolibomFirstObj=[[VolibomFirst alloc]init];
-    [self.navigationController pushViewController:VolibomFirstObj animated:NO];
+    MLandingPage *MLandingPageObj=[[MLandingPage alloc]init];
+    [self.navigationController pushViewController:MLandingPageObj animated:NO];
 }
 @end

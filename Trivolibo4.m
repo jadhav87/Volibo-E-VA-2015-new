@@ -22,14 +22,14 @@
 }
 -(void)graphAnimation{
 
-    graphAnim.frame=CGRectMake(433, 642, 195, 0);
+    graphAnim.frame=CGRectMake(433, 602, 195, 0);
     
     [UIView animateWithDuration:1.0
                           delay:0.1
                         options: UIViewAnimationOptionCurveEaseIn
                      animations:^{
                          
-                         graphAnim.frame=CGRectMake(433, 410, 195, 232);
+                         graphAnim.frame=CGRectMake(433, 377, 195, 232);
                          
                          
                      }

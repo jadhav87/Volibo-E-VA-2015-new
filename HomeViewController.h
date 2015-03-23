@@ -12,6 +12,9 @@
 #import "VolibomViewController.h"
 #import "Trivolibo1.h"
 #import "Nepro1.h"
+#import "TLandingPage.h"
+#import "VLandingPage.h"
+
 
 @interface HomeViewController : UIViewController
 {

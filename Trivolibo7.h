@@ -10,6 +10,8 @@
 #import "HomeViewController.h"
 #import "Trivolibo6.h"
 #import "Trivolibo9.h"
+#import "Trivolibo12.h"
+#import "Header.h"
 
 @interface Trivolibo7 : UIViewController
 {

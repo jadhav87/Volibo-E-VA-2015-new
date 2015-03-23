@@ -160,6 +160,7 @@
     pdfview2.hidden = NO;
     pdfview3.hidden= YES;
     
+    
 }
 -(void)viewPdf3{
     

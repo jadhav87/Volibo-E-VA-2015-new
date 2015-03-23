@@ -17,19 +17,6 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
-    NSURL *url =[[NSBundle mainBundle] URLForResource:@"volleyball_animation" withExtension:@"mp4"];
-    
-    moviePlayerController = [[MPMoviePlayerController alloc] initWithContentURL:url];
-    [moviePlayerController.view setFrame:CGRectMake(0, 0, 1024, 768)];
-    [[NSNotificationCenter defaultCenter] addObserver:self
-                                             selector:@selector(moviePlayBackDidFinish:)
-                                                 name:MPMoviePlayerPlaybackDidFinishNotification
-                                               object:moviePlayerController];
-    [self.view addSubview:moviePlayerController.view];
-    moviePlayerController.fullscreen = YES;
-    moviePlayerController.controlStyle=MPMovieControlStyleNone;
-    [moviePlayerController play];
     
     button6 = [UIButton buttonWithType:UIButtonTypeCustom];
     button6.frame = CGRectMake(938, 694, 52, 54);
@@ -39,34 +26,23 @@
                 action: @selector(homeAction:)
       forControlEvents: UIControlEventTouchUpInside];
     [self.view addSubview:button6];
-
-}
-
-- (void) moviePlayBackDidFinish:(NSNotification*)notification
-{
     
-//    MPMoviePlayerController *player = [notification object];
-//    
-//    [[NSNotificationCenter defaultCenter] removeObserver:self
-//                                                    name:MPMoviePlayerPlaybackDidFinishNotification object:player];
-//    
-//        if ([player respondsToSelector:@selector(setFullscreen:animated:)])
-//        {
-//            [player.view removeFromSuperview];
-//        }
+    NSLog(@"hey here");
+
 }
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
 - (IBAction)swipeRight:(id)sender {
-    HomeViewController *HomeViewControllerObj=[[HomeViewController alloc]init];
-    [self.navigationController pushViewController:HomeViewControllerObj animated:NO];
+    MLandingPage *MLandingPageObj=[[MLandingPage alloc]init];
+    [self.navigationController pushViewController:MLandingPageObj animated:NO];
 }
 
 - (IBAction)swipeLeft:(id)sender {
-    VolibomFirst *VolibomFirstObj=[[VolibomFirst alloc]init];
-    [self.navigationController pushViewController:VolibomFirstObj animated:NO];
+    VolibomViewController *VolibomViewControllerObj=[[VolibomViewController alloc]init];
+    [self.navigationController pushViewController:VolibomViewControllerObj animated:NO];
 }
 
 - (IBAction)homeAction:(id)sender {

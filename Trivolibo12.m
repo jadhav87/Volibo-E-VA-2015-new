@@ -59,8 +59,8 @@
     }
     
     if (pageValue == 3) {
-        Trivolibo11 *Trivolibo11Obj=[[Trivolibo11 alloc]init];
-        [self.navigationController pushViewController:Trivolibo11Obj animated:NO];
+        Trivolibo7 *Trivolibo7Obj=[[Trivolibo7 alloc]init];
+        [self.navigationController pushViewController:Trivolibo7Obj animated:NO];
     }
    
 }

@@ -32,7 +32,7 @@
     
     animation1.frame=CGRectMake(261, -3, 475, 237);
     
-    [UIView animateWithDuration:3.0
+    [UIView animateWithDuration:1.0
                           delay:0.1
                         options: UIViewAnimationOptionCurveEaseIn
                      animations:^{
@@ -45,8 +45,8 @@
      {
      }];
     
-    [UIView animateWithDuration:1.5
-                          delay:3.0
+    [UIView animateWithDuration:1.0
+                          delay:1.0
                         options: UIViewAnimationOptionCurveEaseIn
                      animations:^{
                          
@@ -57,8 +57,8 @@
                      completion:^(BOOL finished)
      {
      }];
-    [UIView animateWithDuration:1.5
-                          delay:3.5
+    [UIView animateWithDuration:1.0
+                          delay:1.5
                         options: UIViewAnimationOptionCurveEaseIn
                      animations:^{
                          

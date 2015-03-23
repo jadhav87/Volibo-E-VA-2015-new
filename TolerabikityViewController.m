@@ -14,7 +14,8 @@
 
 @implementation TolerabikityViewController
 @synthesize chapatiImg,flatChapati,tapButton,grapView,aniImg,ref;
-@synthesize pdfView,webPdf;
+@synthesize pdfView,webPdf,button1;
+@synthesize button2,button3,button4,button5,button6;
 - (void)viewDidLoad {
     [super viewDidLoad];
     val = FALSE;
@@ -75,7 +76,99 @@
     [webPdf stringByEvaluatingJavaScriptFromString:[NSString stringWithFormat:@"window.scrollTo(0.0, 50.0)"]];
     [webPdf loadRequest:request];
 
+    NSURL *url =[[NSBundle mainBundle] URLForResource:@"roti animation_x264" withExtension:@"mp4"];
+    
+    moviePlayerController = [[MPMoviePlayerController alloc] initWithContentURL:url];
+    [moviePlayerController.view setFrame:CGRectMake(0, 0, 1024, 768)];
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(moviePlayBackDidFinish:)
+                                                 name:MPMoviePlayerPlaybackDidFinishNotification
+                                               object:moviePlayerController];
+    [self.view addSubview:moviePlayerController.view];
+    
+    moviePlayerController.fullscreen = YES;
+    moviePlayerController.controlStyle=MPMovieControlStyleNone;
+    [moviePlayerController play];
+    
+    
+    //---------------------------------------- set up button --------------------------------------------------------------//
+    button1 = [UIButton buttonWithType:UIButtonTypeCustom];
+    button1.frame = CGRectMake(30, 711, 143, 33);
+    UIImage *buttonImage1 = [UIImage imageNamed:@"4-8.png"];
+    [self.button1 setImage:buttonImage1 forState:UIControlStateNormal];
+    [button1 addTarget: self
+                action: @selector(potencyBtn:)
+      forControlEvents: UIControlEventTouchUpInside];
+    [self.view addSubview:button1];
+    
+    button2 = [UIButton buttonWithType:UIButtonTypeCustom];
+    button2.frame = CGRectMake(216, 711, 143, 33);
+    UIImage *buttonImage2 = [UIImage imageNamed:@"tab.png"];
+    [self.button2 setImage:buttonImage2 forState:UIControlStateNormal];
+    [button2 addTarget: self
+                action: @selector(efficancyAction:)
+      forControlEvents: UIControlEventTouchUpInside];
+    [self.view addSubview:button2];
+    
+    button3 = [UIButton buttonWithType:UIButtonTypeCustom];
+    button3.frame = CGRectMake(397, 711, 143, 33);
+    UIImage *buttonImage3 = [UIImage imageNamed:@"4-9.png"];
+    [self.button3 setImage:buttonImage3 forState:UIControlStateNormal];
+    [button3 addTarget: self
+                action: @selector(tolerabikityAction:)
+      forControlEvents: UIControlEventTouchUpInside];
+    [self.view addSubview:button3];
+    
+    button4 = [UIButton buttonWithType:UIButtonTypeCustom];
+    button4.frame = CGRectMake(583, 711, 143, 33);
+    UIImage *buttonImage4 = [UIImage imageNamed:@"14-3.png"];
+    [self.button4 setImage:buttonImage4 forState:UIControlStateNormal];
+    [button4 addTarget: self
+                action: @selector(excursionAction:)
+      forControlEvents: UIControlEventTouchUpInside];
+    [self.view addSubview:button4];
+    
+    button5 = [UIButton buttonWithType:UIButtonTypeCustom];
+    button5.frame = CGRectMake(766, 711, 143, 33);
+    UIImage *buttonImage5 = [UIImage imageNamed:@"4-11.png"];
+    [self.button5 setImage:buttonImage5 forState:UIControlStateNormal];
+    [button5 addTarget: self
+                action: @selector(nephroAction:)
+      forControlEvents: UIControlEventTouchUpInside];
+    [self.view addSubview:button5];
+    
+    button6 = [UIButton buttonWithType:UIButtonTypeCustom];
+    button6.frame = CGRectMake(938, 694, 52, 54);
+    UIImage *buttonImage6 = [UIImage imageNamed:@"2-6.png"];
+    [self.button6 setImage:buttonImage6 forState:UIControlStateNormal];
+    [button6 addTarget: self
+                action: @selector(homeAction:)
+      forControlEvents: UIControlEventTouchUpInside];
+    [self.view addSubview:button6];
+
+    
 }
+- (IBAction)nextView:(id)sender {
+    grapView.hidden=NO;
+    [self graphAnimation];
+}
+- (void) moviePlayBackDidFinish:(NSNotification*)notification
+{
+    
+    MPMoviePlayerController *player = [notification object];
+    
+    [[NSNotificationCenter defaultCenter] removeObserver:self
+                                                    name:MPMoviePlayerPlaybackDidFinishNotification object:player];
+    
+    if ([player respondsToSelector:@selector(setFullscreen:animated:)])
+    {
+        [player.view removeFromSuperview];
+        //Volibo_ViewController *Volibo_ViewControllerObj=[[Volibo_ViewController alloc]init];
+        //[self.navigationController pushViewController:Volibo_ViewControllerObj animated:NO];
+        
+    }
+}
+
 -(void)closeGraph: (id)sender{
     grapView.hidden=YES;
 }
@@ -170,13 +263,13 @@
 }
 
 - (IBAction)swipeRight:(id)sender {
-    
+    [moviePlayerController stop];
     page2ViewController *page2ViewControllerObj=[[page2ViewController alloc]init];
     [self.navigationController pushViewController:page2ViewControllerObj animated:NO];
 }
 
 - (IBAction)swipeLeft:(id)sender {
-    
+    [moviePlayerController stop];
     ExcursionViewController *ExcursionViewControllerObj=[[ExcursionViewController alloc]init];
     [self.navigationController pushViewController:ExcursionViewControllerObj animated:NO];
 }

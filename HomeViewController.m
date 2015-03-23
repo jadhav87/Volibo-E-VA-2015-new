@@ -90,18 +90,23 @@
 //----------------------------------------------------------------------------------------------------------------------------------//
 
 -(void)gotoVolibo{
-        Volibo_ViewController *Volibo_ViewControllerObj=[[Volibo_ViewController alloc]init];
-        [self.navigationController pushViewController:Volibo_ViewControllerObj animated:NO];
+//        Volibo_ViewController *Volibo_ViewControllerObj=[[Volibo_ViewController alloc]init];
+//        [self.navigationController pushViewController:Volibo_ViewControllerObj animated:NO];
+    VLandingPage *VLandingPageObj=[[VLandingPage alloc]init];
+    [self.navigationController pushViewController:VLandingPageObj animated:NO];
 }
 -(void)gotoVoliboM{
 //    VolibomViewController *VolibomViewControllerObj=[[VolibomViewController alloc]init];
 //    [self.navigationController pushViewController:VolibomViewControllerObj animated:NO];
-    Nepro1 *Nepro1Obj=[[Nepro1 alloc]init];
-    [self.navigationController pushViewController:Nepro1Obj animated:NO];
+    MLandingPage *MLandingPageObj=[[MLandingPage alloc]init];
+    [self.navigationController pushViewController:MLandingPageObj animated:NO];
 }
 -(void)gotoVolibotri{
-    Trivolibo1 *Trivolibo1Obj=[[Trivolibo1 alloc]init];
-    [self.navigationController pushViewController:Trivolibo1Obj animated:NO];
+//    Trivolibo1 *Trivolibo1Obj=[[Trivolibo1 alloc]init];
+//    [self.navigationController pushViewController:Trivolibo1Obj animated:NO];
+    
+    TLandingPage *TLandingPageObj=[[TLandingPage alloc]init];
+    [self.navigationController pushViewController:TLandingPageObj animated:NO];
 }
 - (void)viewDidLoad {
     [super viewDidLoad];

@@ -18,18 +18,18 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     
-    NSURL *url =[[NSBundle mainBundle] URLForResource:@"Tri Volibo _" withExtension:@"mp4"];
-    
-    moviePlayerController = [[MPMoviePlayerController alloc] initWithContentURL:url];
-    [moviePlayerController.view setFrame:CGRectMake(0, 0, 1024, 768)];
-    [[NSNotificationCenter defaultCenter] addObserver:self
-                                             selector:@selector(moviePlayBackDidFinish:)
-                                                 name:MPMoviePlayerPlaybackDidFinishNotification
-                                               object:moviePlayerController];
-    [self.view addSubview:moviePlayerController.view];
-    moviePlayerController.fullscreen = YES;
-    moviePlayerController.controlStyle=MPMovieControlStyleNone;
-    [moviePlayerController play];
+//    NSURL *url =[[NSBundle mainBundle] URLForResource:@"Tri Volibo _" withExtension:@"mp4"];
+//    
+//    moviePlayerController = [[MPMoviePlayerController alloc] initWithContentURL:url];
+//    [moviePlayerController.view setFrame:CGRectMake(0, 0, 1024, 768)];
+//    [[NSNotificationCenter defaultCenter] addObserver:self
+//                                             selector:@selector(moviePlayBackDidFinish:)
+//                                                 name:MPMoviePlayerPlaybackDidFinishNotification
+//                                               object:moviePlayerController];
+//    [self.view addSubview:moviePlayerController.view];
+//    moviePlayerController.fullscreen = YES;
+//    moviePlayerController.controlStyle=MPMovieControlStyleNone;
+//    [moviePlayerController play];
 }
 
 - (void) moviePlayBackDidFinish:(NSNotification*)notification
@@ -78,6 +78,11 @@
     Trivolibo2 *Trivolibo2Obj=[[Trivolibo2 alloc]init];
     [self.navigationController pushViewController:Trivolibo2Obj animated:NO];
 }
+
+- (IBAction)swipeRight:(id)sender {
+    TLandingPage *TLandingPageObj=[[TLandingPage alloc]init];
+    [self.navigationController pushViewController:TLandingPageObj animated:NO];
+}
 /*
 #pragma mark - Navigation
 
@@ -89,8 +94,7 @@
 */
 
 - (IBAction)swipeLeft:(id)sender {
-    
-    [moviePlayerController stop];
+
     Trivolibo3 *Trivolibo3Obj=[[Trivolibo3 alloc]init];
     [self.navigationController pushViewController:Trivolibo3Obj animated:NO];
 }
