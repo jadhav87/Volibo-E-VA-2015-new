@@ -33,6 +33,14 @@
     [tapGesture1 setDelegate:self];
     [ref addGestureRecognizer:tapGesture1];
     
+    _refcloseImg.userInteractionEnabled = YES;
+    UITapGestureRecognizer *tapGesture2 = [[UITapGestureRecognizer alloc] initWithTarget:self  action:@selector(pdfView:)];
+    
+    tapGesture2.numberOfTapsRequired = 1;
+    
+    [tapGesture2 setDelegate:self];
+    [ref addGestureRecognizer:tapGesture2];
+    
     //--------------------------------------- load pdf -----------------------------------------------------//
     NSString *path = [[NSBundle mainBundle] pathForResource:@"Jr of Japanese society of Nutrition and food science  45 27 1992" ofType:@"pdf"];
     NSURL *targetURL = [NSURL fileURLWithPath:path];

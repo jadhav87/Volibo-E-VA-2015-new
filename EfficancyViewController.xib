@@ -13,6 +13,7 @@
                 <outlet property="img4" destination="Rnx-5L-AsM" id="rRa-Z4-EM7"/>
                 <outlet property="pdfView" destination="tC0-p0-clG" id="H5R-ZF-Dc0"/>
                 <outlet property="ref" destination="CIB-dG-N4L" id="cFi-MW-GbI"/>
+                <outlet property="refcloseImg" destination="8EW-ml-Ub1" id="ILD-j3-od4"/>
                 <outlet property="text1" destination="SPG-Oj-t2u" id="o3K-kd-5Zb"/>
                 <outlet property="text2" destination="Kyj-5V-wxh" id="MY5-23-yIY"/>
                 <outlet property="text3" destination="FDk-QL-j0s" id="pg6-S6-J7B"/>

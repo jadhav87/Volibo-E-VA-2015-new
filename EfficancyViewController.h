@@ -33,6 +33,7 @@
     IBOutlet UIView *pdfView;
     IBOutlet UIWebView *webPdf;
 }
+@property (weak, nonatomic) IBOutlet UIImageView *refcloseImg;
 @property(nonatomic,retain)IBOutlet UIImageView *img1;
 @property(nonatomic,retain)IBOutlet UIImageView *img2;
 @property(nonatomic,retain)IBOutlet UIImageView *img3;
