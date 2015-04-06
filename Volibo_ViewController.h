@@ -13,6 +13,7 @@
 #import <AVFoundation/AVFoundation.h>
 #import <MediaPlayer/MediaPlayer.h>
 #import "VLandingPage.h"
+#import "Header.h"
 
 @interface Volibo_ViewController : UIViewController<UIGestureRecognizerDelegate>
 {
@@ -32,7 +33,11 @@
     
     MPMoviePlayerViewController *moviePlayer;
     MPMoviePlayerController *moviePlayerController;
+    IBOutlet UIImageView *ref;
+     Boolean val;
 }
+- (IBAction)refAction:(id)sender;
+@property(nonatomic,retain)IBOutlet UIImageView *ref;
 @property (strong, nonatomic) MPMoviePlayerController *videoPlayer;
 @property(nonatomic,retain)IBOutlet UIImageView *plate;
 @property(nonatomic,retain)IBOutlet UIImageView *number;

@@ -8,6 +8,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="VoliboM3">
             <connections>
                 <outlet property="popupView" destination="SdP-ke-l0c" id="pfe-eu-Urx"/>
+                <outlet property="ref" destination="MBf-Hd-r79" id="do3-EW-qE9"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -40,6 +41,20 @@
                         <action selector="popupAction:" destination="-1" eventType="touchUpInside" id="Has-zi-RKl"/>
                     </connections>
                 </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="Ekl-yd-fPw">
+                    <rect key="frame" x="8" y="722" width="16" height="16"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <state key="normal" image="circle.png">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="refAction:" destination="-1" eventType="touchUpInside" id="k0w-af-TWc"/>
+                    </connections>
+                </button>
+                <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="gpp4.png" id="MBf-Hd-r79">
+                    <rect key="frame" x="1" y="663" width="321" height="65"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                </imageView>
                 <view contentMode="scaleToFill" id="SdP-ke-l0c">
                     <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -88,6 +103,8 @@
     </objects>
     <resources>
         <image name="bg11.png" width="2134" height="1601"/>
+        <image name="circle.png" width="30" height="30"/>
+        <image name="gpp4.png" width="665" height="131"/>
         <image name="pagem4.png" width="2127" height="1597"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">

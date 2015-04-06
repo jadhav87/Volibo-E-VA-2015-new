@@ -112,7 +112,7 @@
     
     button3 = [UIButton buttonWithType:UIButtonTypeCustom];
     button3.frame = CGRectMake(397, 711, 143, 33);
-    UIImage *buttonImage3 = [UIImage imageNamed:@"4-9.png"];
+    UIImage *buttonImage3 = [UIImage imageNamed:@"10-3.png"];
     [self.button3 setImage:buttonImage3 forState:UIControlStateNormal];
     [button3 addTarget: self
                 action: @selector(tolerabikityAction:)
@@ -121,7 +121,7 @@
     
     button4 = [UIButton buttonWithType:UIButtonTypeCustom];
     button4.frame = CGRectMake(583, 711, 143, 33);
-    UIImage *buttonImage4 = [UIImage imageNamed:@"14-3.png"];
+    UIImage *buttonImage4 = [UIImage imageNamed:@"4-10.png"];
     [self.button4 setImage:buttonImage4 forState:UIControlStateNormal];
     [button4 addTarget: self
                 action: @selector(excursionAction:)
@@ -174,6 +174,11 @@
 }
 - (void) pdfView: (id)sender
 {
+    if (val == 1) {
+        ref.hidden = YES;
+        val = false;
+    }
+    
     pdfView.hidden = NO;
     
 }

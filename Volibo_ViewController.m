@@ -14,7 +14,7 @@
 
 @implementation Volibo_ViewController
 @synthesize plate,number,text1,text2,text3,popup,popupImg,closeBtn;
-@synthesize graphAni1,closePopup;
+@synthesize graphAni1,closePopup,ref ;
 
 - (void)viewDidLoad {
     
@@ -34,10 +34,30 @@
     [tapGesture setDelegate:self];
     
     [closePopup addGestureRecognizer:tapGesture];
+    
+    val = FALSE;
 
+}
+- (IBAction)refAction:(id)sender {
+    
+    if (val == 0) {
+        ref.hidden = NO;
+        val = TRUE;
+    }else{
+        ref.hidden = YES;
+        val = FALSE;
+    }
+    
+    
 }
 
 -(void)graphView{
+    
+    if (val == 1) {
+        
+        ref.hidden = YES;
+        val = false;
+    }
     
     popupImg.hidden=YES;
     closeBtn.hidden=YES;
@@ -143,6 +163,7 @@
 }
 
 - (IBAction)closeAction:(id)sender {
+    
     
     popupImg.hidden=YES;
     closeBtn.hidden=YES;

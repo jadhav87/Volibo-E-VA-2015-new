@@ -14,7 +14,12 @@
 @interface VoliboM2 : UIViewController
 {
     IBOutlet UIImageView *animationView;
+    IBOutlet UIImageView *ref;
+    Boolean val;
+ 
 }
+- (IBAction)refAction:(id)sender;
+@property(nonatomic,retain)IBOutlet UIImageView *ref;
 @property(nonatomic,retain)IBOutlet UIImageView *animationView;
 - (IBAction)homeAction:(id)sender;
 - (IBAction)swipeRight:(UISwipeGestureRecognizer *)sender;

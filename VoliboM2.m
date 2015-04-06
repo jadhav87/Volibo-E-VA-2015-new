@@ -13,12 +13,26 @@
 @end
 
 @implementation VoliboM2
-@synthesize animationView;
+@synthesize animationView,ref;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     [self graphAnimation];
+    val = FALSE;
+}
+
+- (IBAction)refAction:(id)sender {
+    
+    if (val == 0) {
+        ref.hidden = NO;
+        val = TRUE;
+    }else{
+        ref.hidden = YES;
+        val = FALSE;
+    }
+    
+    
 }
 
 - (void)didReceiveMemoryWarning {

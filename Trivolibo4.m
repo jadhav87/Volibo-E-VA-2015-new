@@ -13,12 +13,24 @@
 @end
 
 @implementation Trivolibo4
-@synthesize graphAnim;
+@synthesize graphAnim,ref;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     [self graphAnimation];
+}
+- (IBAction)refAction:(id)sender {
+    
+    if (val == 0) {
+        ref.hidden = NO;
+        val = TRUE;
+    }else{
+        ref.hidden = YES;
+        val = FALSE;
+    }
+    
+    
 }
 -(void)graphAnimation{
 

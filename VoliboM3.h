@@ -15,8 +15,14 @@
 @interface VoliboM3 : UIViewController<UIGestureRecognizerDelegate>
 {
     IBOutlet UIView *popupView;
+    IBOutlet UIImageView *ref;
+    Boolean val;
 }
 @property(nonatomic,retain)IBOutlet UIView *popupView;
+
+- (IBAction)refAction:(id)sender;
+@property(nonatomic,retain)IBOutlet UIImageView *ref;
+
 - (IBAction)homeAction:(id)sender;
 - (IBAction)swipeRight:(UISwipeGestureRecognizer *)sender;
 - (IBAction)swipeLeft:(UISwipeGestureRecognizer *)sender;

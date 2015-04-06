@@ -8,6 +8,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="VoliboM2">
             <connections>
                 <outlet property="animationView" destination="Z1T-gJ-Pt4" id="Zkx-Wb-chB"/>
+                <outlet property="ref" destination="Gwp-J6-fnb" id="si4-wV-Prb"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -32,6 +33,20 @@
                     </state>
                     <connections>
                         <action selector="homeAction:" destination="-1" eventType="touchUpInside" id="GIY-aM-hEY"/>
+                    </connections>
+                </button>
+                <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="gpp3.png" id="Gwp-J6-fnb">
+                    <rect key="frame" x="1" y="663" width="426" height="62"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                </imageView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="ij6-Jv-1Uc">
+                    <rect key="frame" x="8" y="722" width="16" height="16"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <state key="normal" image="circle.png">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="refAction:" destination="-1" eventType="touchUpInside" id="a2l-9L-4lK"/>
                     </connections>
                 </button>
             </subviews>
@@ -61,6 +76,8 @@
     </objects>
     <resources>
         <image name="bg10.png" width="2132" height="1591"/>
+        <image name="circle.png" width="30" height="30"/>
+        <image name="gpp3.png" width="885" height="131"/>
         <image name="graphm1.png" width="716" height="306"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">

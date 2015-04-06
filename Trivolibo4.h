@@ -14,8 +14,13 @@
 @interface Trivolibo4 : UIViewController
 {
     IBOutlet UIImageView *graphAnim;
+    IBOutlet UIImageView *ref;
+    Boolean val;
 }
+- (IBAction)refAction:(id)sender;
+@property(nonatomic,retain)IBOutlet UIImageView *ref;
 @property(nonatomic,retain)IBOutlet UIImageView *graphAnim;
+
 - (IBAction)homeAction:(id)sender;
 - (IBAction)swipeRight:(id)sender;
 - (IBAction)swipeLeft:(id)sender;

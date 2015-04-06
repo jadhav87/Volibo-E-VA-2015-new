@@ -7,6 +7,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="Trivolibo6">
             <connections>
+                <outlet property="ref" destination="V1K-og-HpG" id="HxG-IO-vTe"/>
                 <outlet property="tt1" destination="p6H-mk-iej" id="6OU-WX-SOn"/>
                 <outlet property="tt2" destination="srq-Hc-fwe" id="imW-oR-zaS"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
@@ -39,6 +40,20 @@
                     <rect key="frame" x="407" y="483" width="305" height="117"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 </imageView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="H8T-eH-x3k">
+                    <rect key="frame" x="8" y="722" width="16" height="16"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <state key="normal" image="circle.png">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="refAction:" destination="-1" eventType="touchUpInside" id="5TA-Xu-GFa"/>
+                    </connections>
+                </button>
+                <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="gpp6.png" id="V1K-og-HpG">
+                    <rect key="frame" x="2" y="662" width="263" height="64"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                </imageView>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <gestureRecognizers/>
@@ -65,6 +80,8 @@
         </swipeGestureRecognizer>
     </objects>
     <resources>
+        <image name="circle.png" width="30" height="30"/>
+        <image name="gpp6.png" width="644" height="126"/>
         <image name="t8.png" width="2135" height="1602"/>
         <image name="tt1.png" width="640" height="245"/>
         <image name="tt2.png" width="729" height="244"/>

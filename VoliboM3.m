@@ -13,7 +13,7 @@
 @end
 
 @implementation VoliboM3
-@synthesize popupView;
+@synthesize popupView,ref;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -31,7 +31,22 @@
     
     [popupView addGestureRecognizer:tapGesture];
     
+    val = FALSE;
+    
 }
+- (IBAction)refAction:(id)sender {
+    
+    if (val == 0) {
+        ref.hidden = NO;
+        val = TRUE;
+    }else{
+        ref.hidden = YES;
+        val = FALSE;
+    }
+    
+    
+}
+
 - (void) graphView: (id)sender
 {
     popupView.hidden=YES;

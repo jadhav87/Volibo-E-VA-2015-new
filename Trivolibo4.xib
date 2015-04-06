@@ -8,6 +8,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="Trivolibo4">
             <connections>
                 <outlet property="graphAnim" destination="ker-f6-Cld" id="Jgq-c8-8V7"/>
+                <outlet property="ref" destination="sHP-yF-sof" id="le0-Kz-3YX"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -34,6 +35,20 @@
                     <rect key="frame" x="433" y="370" width="195" height="232"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 </imageView>
+                <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="gpp5.png" id="sHP-yF-sof">
+                    <rect key="frame" x="3" y="664" width="426" height="62"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                </imageView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="xit-IX-ge8">
+                    <rect key="frame" x="13" y="722" width="16" height="16"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <state key="normal" image="circle.png">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="refAction:" destination="-1" eventType="touchUpInside" id="G33-pF-YPu"/>
+                    </connections>
+                </button>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <gestureRecognizers/>
@@ -60,6 +75,8 @@
         </swipeGestureRecognizer>
     </objects>
     <resources>
+        <image name="circle.png" width="30" height="30"/>
+        <image name="gpp5.png" width="809" height="134"/>
         <image name="m12.png" width="2135" height="1602"/>
         <image name="tGraph1.png" width="403" height="484"/>
     </resources>

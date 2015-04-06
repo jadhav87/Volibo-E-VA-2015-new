@@ -14,6 +14,7 @@
                 <outlet property="plate" destination="iQ7-gP-ILG" id="4En-ug-MhK"/>
                 <outlet property="popup" destination="R7E-Tm-bJm" id="EmE-al-AtY"/>
                 <outlet property="popupImg" destination="s0I-f6-zRD" id="ZfO-Gt-sMr"/>
+                <outlet property="ref" destination="IkW-LH-KSw" id="JJS-Qp-dd6"/>
                 <outlet property="text1" destination="raP-cY-Wn0" id="FcT-Kr-hnA"/>
                 <outlet property="text2" destination="4ia-5o-Xbm" id="8Tb-Q8-XDU"/>
                 <outlet property="text3" destination="4cK-UE-1R8" id="9hv-8X-Lr7"/>
@@ -86,6 +87,20 @@
                 <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="gg1.png" id="JHl-jD-JAb">
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 </imageView>
+                <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="gpp1.png" id="IkW-LH-KSw">
+                    <rect key="frame" x="1" y="661" width="309" height="68"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                </imageView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="abu-K1-0ub">
+                    <rect key="frame" x="8" y="722" width="16" height="16"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <state key="normal" image="circle.png">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="refAction:" destination="-1" eventType="touchUpInside" id="m3F-wM-LPo"/>
+                    </connections>
+                </button>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <gestureRecognizers/>
@@ -118,8 +133,10 @@
         <image name="2-4.png" width="606" height="647"/>
         <image name="28.png" width="227" height="227"/>
         <image name="3-2.png" width="1568" height="53"/>
+        <image name="circle.png" width="30" height="30"/>
         <image name="gb1.png" width="1282" height="737"/>
         <image name="gg1.png" width="1478" height="844"/>
+        <image name="gpp1.png" width="640" height="131"/>
         <image name="page2-4.png" width="753" height="752"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">

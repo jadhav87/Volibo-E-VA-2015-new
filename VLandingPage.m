@@ -29,6 +29,8 @@
     moviePlayerController.fullscreen = YES;
     moviePlayerController.controlStyle=MPMovieControlStyleNone;
     [moviePlayerController play];
+    
+    NSLog(@"video landing page");
 
 }
 
@@ -43,6 +45,7 @@
     if ([player respondsToSelector:@selector(setFullscreen:animated:)])
     {
         [player.view removeFromSuperview];
+        
         Volibo_ViewController *Volibo_ViewControllerObj=[[Volibo_ViewController alloc]init];
         [self.navigationController pushViewController:Volibo_ViewControllerObj animated:NO];
         
