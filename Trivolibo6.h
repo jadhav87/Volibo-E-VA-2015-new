@@ -15,7 +15,12 @@
     IBOutlet UIImageView *graphAnim;
     IBOutlet UIImageView *tt1;
     IBOutlet UIImageView *tt2;
+    
+    IBOutlet UIImageView *ref;
+    Boolean val;
 }
+- (IBAction)refAction:(id)sender;
+@property(nonatomic,retain)IBOutlet UIImageView *ref;
 @property(nonatomic,retain)IBOutlet UIImageView *graphAnim;
 @property(nonatomic,retain)IBOutlet UIImageView *tt1;
 @property(nonatomic,retain)IBOutlet UIImageView *tt2;
