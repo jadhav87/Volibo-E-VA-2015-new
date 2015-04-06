@@ -14,6 +14,7 @@
 #import "Nepro1.h"
 #import "TLandingPage.h"
 #import "VLandingPage.h"
+#import "SartUpVideo.h"
 
 
 @interface HomeViewController : UIViewController
@@ -30,4 +31,5 @@
 
 - (IBAction)swipeRight:(UISwipeGestureRecognizer *)sender;
 - (IBAction)swipeLeft:(UISwipeGestureRecognizer *)sender;
+- (IBAction)homeAction:(id)sender;
 @end

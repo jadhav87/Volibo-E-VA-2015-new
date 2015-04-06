@@ -39,6 +39,16 @@
                     <rect key="frame" x="409" y="518" width="197" height="197"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 </imageView>
+                <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="fva-BB-jue">
+                    <rect key="frame" x="938" y="694" width="52" height="54"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <state key="normal" image="2-6.png">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="homeAction:" destination="-1" eventType="touchUpInside" id="Ij7-WB-E8P"/>
+                    </connections>
+                </button>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <gestureRecognizers/>
@@ -67,6 +77,7 @@
     <resources>
         <image name="1-1.png" width="2134" height="1601"/>
         <image name="1-5.png" width="749" height="749"/>
+        <image name="2-6.png" width="113" height="113"/>
         <image name="dr1.png" width="459" height="459"/>
         <image name="dr2.png" width="459" height="459"/>
         <image name="dr3.png" width="459" height="459"/>

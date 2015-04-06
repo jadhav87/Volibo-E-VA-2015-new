@@ -7,6 +7,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="NephroViewController">
             <connections>
+                <outlet property="ref" destination="q4z-vt-Uvi" id="F7N-9B-oG4"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -79,6 +80,20 @@
                         <action selector="potencyBtn:" destination="-1" eventType="touchUpInside" id="wsF-DS-dfC"/>
                     </connections>
                 </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="Mcd-u1-ixZ">
+                    <rect key="frame" x="8" y="722" width="16" height="16"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <state key="normal" image="circle.png">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="refAction:" destination="-1" eventType="touchUpInside" id="pNN-qO-jmB"/>
+                    </connections>
+                </button>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="gpp2.png" id="q4z-vt-Uvi">
+                    <rect key="frame" x="1" y="662" width="263" height="64"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                </imageView>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <gestureRecognizers/>
@@ -111,6 +126,8 @@
         <image name="4-10.png" width="300" height="69"/>
         <image name="4-8.png" width="300" height="69"/>
         <image name="4-9.png" width="300" height="69"/>
+        <image name="circle.png" width="30" height="30"/>
+        <image name="gpp2.png" width="545" height="131"/>
         <image name="tab.png" width="300" height="69"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">

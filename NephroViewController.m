@@ -13,12 +13,13 @@
 @end
 
 @implementation NephroViewController
-@synthesize button1,button2,button3,button4,button5,button6;
+@synthesize button1,button2,button3,button4,button5,button6,ref,button7;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     NSLog(@"NephroViewController");
+    val = FALSE;
     
     NSURL *url =[[NSBundle mainBundle] URLForResource:@"kidney_animation" withExtension:@"mp4"];
     
@@ -89,6 +90,23 @@
                 action: @selector(homeAction:)
       forControlEvents: UIControlEventTouchUpInside];
     [self.view addSubview:button6];
+    
+    ref = [[UIImageView alloc]initWithFrame:CGRectMake(1, 662, 263, 64)];
+    [ref setImage:[UIImage imageNamed:@"gpp2.png"]];
+    [self.view addSubview:ref];
+    
+    button7 = [UIButton buttonWithType:UIButtonTypeCustom];
+    button7.frame = CGRectMake(8, 722, 16, 16);
+    UIImage *buttonImage7 = [UIImage imageNamed:@"circle.png"];
+    [self.button7 setImage:buttonImage7 forState:UIControlStateNormal];
+    [button7 addTarget: self
+                action: @selector(refAction:)
+      forControlEvents: UIControlEventTouchUpInside];
+    [self.view addSubview:button7];
+    
+    ref.hidden=YES;
+    
+    
 
 }
 - (void) moviePlayBackDidFinish:(NSNotification*)notification
@@ -103,6 +121,18 @@
 //    {
 //        [player.view removeFromSuperview];
 //    }
+}
+- (IBAction)refAction:(id)sender {
+    
+    if (val == 0) {
+        ref.hidden = NO;
+        val = TRUE;
+    }else{
+        ref.hidden = YES;
+        val = FALSE;
+    }
+    
+    
 }
 
 - (IBAction)swipeRight:(id)sender {

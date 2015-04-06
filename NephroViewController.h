@@ -28,16 +28,24 @@
     UIButton *button4;
     UIButton *button5;
     UIButton *button6;
+    UIButton *button7;
+    
+    UIImageView *ref;
+    Boolean val;
+
     
 }
 
+@property(nonatomic,retain)UIImageView *ref;
 @property(nonatomic,retain)UIButton *button1;
 @property(nonatomic,retain)UIButton *button2;
 @property(nonatomic,retain)UIButton *button3;
 @property(nonatomic,retain)UIButton *button4;
 @property(nonatomic,retain)UIButton *button5;
 @property(nonatomic,retain)UIButton *button6;
+@property(nonatomic,retain)UIButton *button7;
 
+- (IBAction)refAction:(id)sender;
 - (IBAction)swipeRight:(id)sender;
 - (IBAction)swipeLeft:(id)sender;
 

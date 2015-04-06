@@ -87,6 +87,7 @@
     }
     
 }
+
 //----------------------------------------------------------------------------------------------------------------------------------//
 
 -(void)gotoVolibo{
@@ -111,6 +112,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+    
 }
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
 {
@@ -146,13 +148,19 @@
 
 - (IBAction)swipeRight:(UISwipeGestureRecognizer *)sender {
     
-//    ViewController *ViewControllerObj=[[ViewController alloc]init];
-//    [self.navigationController pushViewController:ViewControllerObj animated:NO];
+//    SartUpVideo *SartUpVideoObj=[[SartUpVideo alloc]init];
+//    [self.navigationController pushViewController:SartUpVideoObj animated:NO];
 }
 
 - (IBAction)swipeLeft:(UISwipeGestureRecognizer *)sender {
     
 //    Volibo_ViewController *Volibo_ViewControllerObj=[[Volibo_ViewController alloc]init];
 //    [self.navigationController pushViewController:Volibo_ViewControllerObj animated:NO];
+}
+
+- (IBAction)homeAction:(id)sender {
+    
+    SartUpVideo *SartUpVideoObj=[[SartUpVideo alloc]init];
+    [self.navigationController pushViewController:SartUpVideoObj animated:NO];
 }
 @end
